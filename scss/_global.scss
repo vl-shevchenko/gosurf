@@ -1,0 +1,32 @@
+.header {
+  position: relative;
+  height: 100vh;
+  min-width: 0;
+}
+
+.suptitle__left {
+  font-size: 22px;
+  // line-height: 32px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.5;
+  &::before {
+    content: '';
+    top: 50%;
+    right: 120%;
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    background: #ffffff;
+    opacity: 0.5;
+  }
+}
+
+.title__left {
+  font-weight: 800;
+  font-size: 40px;
+  // line-height: 86px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
