@@ -18,4 +18,16 @@ $(document).ready(function () {
     rows: 1,
     variableWidth: true,
   });
+
+  $('.surf-slider').slick({
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow:
+      '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
+    nextArrow:
+      '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
+    asNavFor: '.slider-dots',
+  });
 });
