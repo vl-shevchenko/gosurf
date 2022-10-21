@@ -1,8 +1,12 @@
 /* Указываем box sizing */
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 /* Убираем внешние отступы */
@@ -49,7 +53,7 @@ select {
 }
 
 body {
-  background: #fb37;
+  background: rgba(69, 14, 97, 0.467);
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
 }

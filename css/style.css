@@ -1,11 +1,16 @@
 @charset "UTF-8";
 /* Указываем box sizing */
 @import 'animate.css';
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /* Убираем внешние отступы */
@@ -52,7 +57,7 @@ select {
 }
 
 body {
-  background: rgba(255, 187, 51, 0.4666666667);
+  background: rgba(69, 14, 97, 0.467);
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
 }
@@ -63,14 +68,14 @@ body {
   min-width: 0;
 }
 
-.suptitle__left {
+.header-suptitle__left {
   font-size: 22px;
   letter-spacing: 7.33333px;
   text-transform: uppercase;
   color: #ffffff;
   opacity: 0.5;
 }
-.suptitle__left::before {
+.header-suptitle__left::before {
   content: "";
   top: 50%;
   right: 120%;
@@ -81,11 +86,91 @@ body {
   opacity: 0.5;
 }
 
+.header-title__left {
+  font-weight: 800;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  position: relative;
+  font-weight: 800;
+  font-size: 200px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.1254901961);
+  display: inline-block;
+  -webkit-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+.title__suptitle {
+  position: absolute;
+  font-weight: 800;
+  font-size: 80px;
+  top: 0;
+  right: -10px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.title__suptitle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+}
+
+.suptitle {
+  right: 2%;
+  text-align: right;
+  -webkit-transform: translateY(-85px);
+      -ms-transform: translateY(-85px);
+          transform: translateY(-85px);
+}
+.suptitle__left {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-block;
+  position: relative;
+  padding-left: 103px;
+  opacity: 0.5;
+}
+.suptitle__left::before {
+  top: 50%;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.5;
+}
+
 .title__left {
   font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
   color: #ffffff;
+}
+.title__left-span {
+  font-weight: 250;
+  color: #ffffff;
+}
+
+.section__wrapper {
+  position: relative;
+  margin: 150px 0;
 }
 
 .header__slider {
@@ -375,4 +460,8 @@ body {
 .name-point {
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
+}
+
+.surf {
+  position: relative;
 }
