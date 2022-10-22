@@ -273,36 +273,41 @@ $header__right: 2%;
 }
 
 //surf slider
+.slick-slide:nth-child(4n + 1) {
+  .slider-box__inner {
+    margin-top: 32px;
+    height: 750px;
+    background-position: bottom;
+    overflow: hidden;
+  }
+}
+.slick-slide:nth-child(4n + 3) {
+  .slider-box__inner {
+    margin-top: 89px;
+  }
+}
+
 .surf-slider {
 }
-.slider-box-1 {
-  background-image: url(../images/surf/bg-malibu-beachjpg.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.slider-box-2 {
-  background-image: url(../images/surf/bg-airlie-beach.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.slider-box-3 {
-  background-image: url(../images/surf/bg-coud-nine.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.slider-box-4 {
-  background-image: url(../images/surf/bg-vieux-boucau.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .slider-box {
   position: relative;
-  width: 400px;
-  height: 750px;
+
+  &__inner {
+    position: relative;
+    border: #4af6cd 1px solid;
+    overflow: hidden;
+    width: 400px;
+    height: 750px;
+    max-height: 750px;
+  }
+  &__inner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   &__beach-name {
     position: absolute;
     height: 72px;
