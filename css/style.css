@@ -170,7 +170,7 @@ body {
 
 .section__wrapper {
   position: relative;
-  margin: 150px 0;
+  padding: 160px 0;
 }
 
 .header__slider {
@@ -470,25 +470,40 @@ body {
 
 .slick-slide:nth-child(4n+1) .slider-box__inner {
   margin-top: 32px;
-  height: 750px;
-  background-position: bottom;
-  overflow: hidden;
 }
 
 .slick-slide:nth-child(4n+3) .slider-box__inner {
   margin-top: 89px;
 }
 
+.slick-current .btn-box {
+  display: block;
+}
+.slick-current .slider-box__inner {
+  background: rgba(28, 33, 33, 0.062745098);
+}
+
 .slider-box {
   position: relative;
+  margin: 0 auto;
+  display: table;
 }
 .slider-box__inner {
   position: relative;
   border: #4af6cd 1px solid;
   overflow: hidden;
-  width: 400px;
-  height: 750px;
-  max-height: 750px;
+  width: 390px;
+  min-height: 750px;
+  background: rgba(28, 33, 33, 0.8039215686);
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+}
+.slider-box__inner:hover {
+  background: rgba(28, 33, 33, 0.062745098);
+}
+.slider-box__inner:hover .btn-box {
+  display: block;
 }
 .slider-box__inner-img {
   position: absolute;
@@ -498,6 +513,7 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  z-index: -1;
 }
 .slider-box__beach-name {
   position: absolute;
@@ -532,17 +548,19 @@ body {
 }
 
 .btn-box {
+  display: none;
   text-align: center;
   position: absolute;
   bottom: 15px;
   left: 0;
   right: 0;
+  color: #fff;
 }
 .btn-box__title {
   font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
 }
 .btn-box__title-span {
   position: relative;

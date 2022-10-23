@@ -28,6 +28,7 @@ $(document).ready(function () {
       '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
     nextArrow:
       '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
-    asNavFor: '.slider-dots',
+    // centerMode: true,
+    // variableWidth: true, //дозволяє робити задану ширину слайду
   });
 });
