@@ -272,6 +272,17 @@ $header__right: 2%;
   background-position: 112% 200px;
 }
 
+.world-map-wrapper {
+  display: flex;
+  margin: 0 auto 60px;
+  max-width: 1200px;
+  min-height: 635px;
+  background-image: url(../images/surf/world-map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 //surf slider
 .slick-slide:nth-child(4n + 1) {
   .slider-box__inner {
@@ -303,7 +314,6 @@ $header__right: 2%;
 
   &__inner {
     position: relative;
-    border: #4af6cd 1px solid;
     overflow: hidden;
     width: 390px;
     min-height: 750px;

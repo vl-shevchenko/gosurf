@@ -57,7 +57,7 @@ select {
 }
 
 body {
-  background: rgba(69, 14, 97, 0.467);
+  background: #171919;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
 }
@@ -468,6 +468,19 @@ body {
   background-position: 112% 200px;
 }
 
+.world-map-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 60px;
+  max-width: 1200px;
+  min-height: 635px;
+  background-image: url(../images/surf/world-map.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .slick-slide:nth-child(4n+1) .slider-box__inner {
   margin-top: 32px;
 }
@@ -490,7 +503,6 @@ body {
 }
 .slider-box__inner {
   position: relative;
-  border: #4af6cd 1px solid;
   overflow: hidden;
   width: 390px;
   min-height: 750px;

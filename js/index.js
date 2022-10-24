@@ -1,3 +1,4 @@
+// slick slider
 $(document).ready(function () {
   $('.header__slider').slick({
     infinite: true,
@@ -32,3 +33,23 @@ $(document).ready(function () {
     // variableWidth: true, //дозволяє робити задану ширину слайду
   });
 });
+
+//weather
+// const lat = 58.7984;
+// const lng = 17.8081;
+// const params = 'waveHeight,waterTemperature,windSpeed';
+
+// fetch(
+//   `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`,
+//   {
+//     headers: {
+//       Authorization:
+//         '08b5570a-5385-11ed-a654-0242ac130002-08b55782-5385-11ed-a654-0242ac130002',
+//     },
+//   }
+// )
+//   .then((response) => response.json())
+//   .then((jsonData) => {
+//     // Do something with response data.
+//     console.log(jsonData);
+//   });
