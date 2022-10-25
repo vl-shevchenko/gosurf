@@ -25,6 +25,7 @@ $(document).ready(function () {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    rows: 0,
     prevArrow:
       '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
     nextArrow:
@@ -35,9 +36,6 @@ $(document).ready(function () {
 });
 
 //weather
-// const lat = 58.7984;
-// const lng = 17.8081;
-// const params = 'waveHeight,waterTemperature,windSpeed';
 
 // fetch(
 //   `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`,
@@ -53,3 +51,25 @@ $(document).ready(function () {
 //     // Do something with response data.
 //     console.log(jsonData);
 //   });
+
+//===================================================================================
+// const lat = 25.793449;
+// const lng = -80.139198;
+// const params = 'waveHeight,waterTemperature,windSpeed';
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'X-RapidAPI-Key': '4f03edbfffmsh7a6729e58896fe1p1c6f3fjsn31c9794bdc89',
+//     'X-RapidAPI-Host': 'stormglass.p.rapidapi.com',
+//   },
+// };
+
+// fetch(
+//   `https://stormglass.p.rapidapi.com/forecast?lat=${lat}&lng=${lng}&params=${params}`,
+//   options
+// )
+//   .then((response) => response.json())
+//   .then((response) => console.log(response))
+//   .catch((err) => console.error(err));
+
+//===================================================================================
