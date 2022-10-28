@@ -73,3 +73,10 @@ $(document).ready(function () {
 //   .catch((err) => console.error(err));
 
 //===================================================================================
+
+const dotsBeach = document.querySelector('.dots-beach');
+
+dotsBeach.addEventListener('click', dotsHandler);
+function dotsHandler(e) {
+  dotsBeach.classList.toggle('active');
+}
