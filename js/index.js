@@ -74,9 +74,20 @@ $(document).ready(function () {
 
 //===================================================================================
 
-const dotsBeach = document.querySelector('.dots-beach');
+const worldMap = document.querySelector('.world-map-wrapper');
+let dotsBeach = document.getElementById('#surf-slider-dots');
 
-dotsBeach.addEventListener('click', dotsHandler);
-function dotsHandler(e) {
-  dotsBeach.classList.toggle('active');
+worldMap.addEventListener('click', changeDotsForm);
+function changeDotsForm(e) {
+  if (e.target.closest('span')) {
+    let currentDots = e.target.classList.toggle('dots-beach--active');
+    dotsBeach = currentDots;
+  }
 }
+
+// worldMap.addEventListener('click', changeDotsFormRemove);
+// function changeDotsFormRemove(e) {
+//   if (e.target.matches('.world-map-wrapper>.dots-beach--active')) {
+//     dotsBeach.classList.remove('dots-beach--active');
+//   }
+// }
