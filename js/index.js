@@ -76,12 +76,28 @@ $(document).ready(function () {
 
 const worldMap = document.querySelector('.world-map-wrapper');
 let dotsBeach = document.getElementById('#surf-slider-dots');
+let dotsBeachWrapper = document.getElementById('#dots-beach-wrapper');
 
 worldMap.addEventListener('click', changeDotsForm);
 function changeDotsForm(e) {
   if (e.target.closest('span')) {
     let currentDots = e.target.classList.toggle('dots-beach--active');
     dotsBeach = currentDots;
+    // let BeachWrapper = (e.target.innerHTML = `
+    // <div class="beach-info">
+    //             <div class="beach-info-wrapper">
+    //               <a class="beach-info__location-name" href="#">Airlie Beach</a>
+    //               <p class="beach-info__location-city">Australia</p>
+
+    //               <div class="beach-info__weather">
+    //                 <p class="beach-info__weather-wave">9 - 13</p>
+    //                 <p class="beach-info__weather-water">+2.3</p>
+    //                 <p class="beach-info__weather-wind">4 SE</p>
+    //               </div>
+    //             </div>
+    //           </div>
+    // `);
+    // dotsBeachWrapper = BeachWrapper;
   }
 }
 

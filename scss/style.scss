@@ -265,6 +265,8 @@ $header__right: 2%;
   animation-delay: 6s;
 }
 
+//surf
+
 .surf {
   background-image: url(../images/surf/poi-bg.svg);
   background-size: auto;
@@ -282,6 +284,200 @@ $header__right: 2%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.coordinates-beach {
+  position: absolute;
+  left: 98%;
+  top: calc(50% - 25px / 2 + 185px);
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  white-space: nowrap;
+  opacity: 0.5;
+  width: 0;
+  height: 0;
+}
+//beach-info
+.dots-beach-wrapper {
+  position: relative;
+  height: fit-content;
+  top: 119px;
+  left: -137px;
+}
+.beach-info-wrapper {
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.beach-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 285px;
+  height: 215px;
+  background: #0f1010c4;
+  mix-blend-mode: normal;
+  // opacity: 0.7;
+  border-radius: 6px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  z-index: 1;
+  &__location-name {
+    position: relative;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 25px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 14px;
+      top: 50%;
+      background-image: url(../images/arrow-right.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      transform: translateY(-50%);
+      padding-left: 110px;
+    }
+  }
+
+  &__location-city {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    &::after {
+      content: '';
+      position: absolute;
+      background: #4af6cd;
+      width: 80px;
+      height: 1px;
+      top: -8px;
+      left: 0;
+    }
+  }
+
+  &__weather {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__weather-wave {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      top: -15px;
+      background-image: url(../images/surf/info-beach/wave.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: 'Surf (FT)';
+      position: absolute;
+      top: 30px;
+      width: 42px;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+
+  &__weather-water {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      top: -15px;
+      background-image: url(../images/surf/info-beach/water.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: 'Surf (FT)';
+      position: absolute;
+      top: 30px;
+      width: 42px;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+
+  &__weather-wind {
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      top: -15px;
+      background-image: url(../images/surf/info-beach/wind.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: 'Surf (FT)';
+      position: absolute;
+      top: 30px;
+      width: 42px;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
 }
 
 // surf-slider dots
@@ -312,8 +508,7 @@ $header__right: 2%;
 }
 
 .dots-malibu {
-  top: 51%;
-  left: 0;
+  left: calc(50% - 12px);
 }
 .dots-airlie {
   top: 44%;
