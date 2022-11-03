@@ -305,6 +305,8 @@ $header__right: 2%;
 .dots-beach-wrapper {
   position: relative;
   height: fit-content;
+  height: 500px;
+  width: 500px;
   top: 119px;
   left: -137px;
 }
@@ -325,7 +327,10 @@ $header__right: 2%;
   border-radius: 6px;
   color: #ffffff;
   margin-bottom: 10px;
-  z-index: 1;
+  // z-index: 2;
+  // top: -190px;
+  // left: -40px;
+  // transform: rotate(45deg);
   &__location-name {
     position: relative;
     font-size: 18px;
@@ -490,6 +495,7 @@ $header__right: 2%;
   transform: rotate(-45deg);
   transition: all 0.7s;
   cursor: pointer;
+  z-index: 1;
   &:hover {
     box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
   }
@@ -508,7 +514,8 @@ $header__right: 2%;
 }
 
 .dots-malibu {
-  left: calc(50% - 12px);
+  top: 54%;
+  left: 0;
 }
 .dots-airlie {
   top: 44%;
