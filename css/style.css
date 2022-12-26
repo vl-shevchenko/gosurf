@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* Указываем box sizing */
-@import 'animate.css';
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -505,10 +504,14 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  height: 500px;
-  width: 500px;
-  top: 119px;
-  left: -137px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -205px;
+  left: -24px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .beach-info-wrapper {
@@ -794,6 +797,13 @@ body {
 .dots-4 {
   top: 73%;
   left: 89%;
+  z-index: 1;
+}
+
+.dots-5 {
+  top: 73%;
+  left: 89%;
+  z-index: 0;
 }
 
 .slick-slide:nth-child(4n+1) .slider-box__inner {

@@ -1,6 +1,6 @@
 @import '_null';
 @import '_global';
-@import 'animate.css';
+// @import 'animate.css';
 
 $header__right: 2%;
 
@@ -305,10 +305,10 @@ $header__right: 2%;
 .dots-beach-wrapper {
   position: relative;
   height: fit-content;
-  height: 500px;
-  width: 500px;
-  top: 119px;
-  left: -137px;
+  width: fit-content;
+  top: -205px;
+  left: -24px;
+  transform: rotate(45deg);
 }
 .beach-info-wrapper {
   margin: 32px;
@@ -544,6 +544,13 @@ $header__right: 2%;
 .dots-4 {
   top: 73%;
   left: 89%;
+  z-index: 1;
+}
+// crutch
+.dots-5 {
+  top: 73%;
+  left: 89%;
+  z-index: 0;
 }
 
 //surf slider

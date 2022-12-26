@@ -75,33 +75,88 @@ $(document).ready(function () {
 //===================================================================================
 
 const worldMap = document.querySelector('.world-map-wrapper');
-let dotsBeach = document.getElementById('surf-slider-dots');
-let dotsBeachWrapper = document.getElementById('dots-beach-wrapper');
+let dotsBeach = document.querySelectorAll('span.dots-beach');
+
+let dotsMalibu = document.getElementById('dots-malibu');
+let dotsAirlie = document.getElementById('dots-airlie');
+let dotsCloud = document.getElementById('dots-cloud');
+let dotsVieux = document.getElementById('dots-vieux');
+let dots1 = document.getElementById('dots-1');
+let dots2 = document.getElementById('dots-2');
+let dots3 = document.getElementById('dots-3');
+let dots4 = document.getElementById('dots-4');
+
+for (let i = 0; i < dotsBeach.length; i++) {
+  console.log(dotsBeach[i].classList);
+}
 
 worldMap.addEventListener('click', changeDotsForm);
+// for (let i = 0; i < dotsBeach.length; i++) {
+//   dotsBeach[i].addEventListener('click', changeDotsForm);
+// }
 function changeDotsForm(e) {
-  dotsBeach.classList.remove('dots-beach--active');
-
   let dotsCurrent = e.target;
-  dotsBeachWrapper.innerHTML = '';
+  // let dotsBeachWrapper = document.getElementById('dots-beach-wrapper');
 
-  if (e.target.closest('span')) {
-    dotsCurrent.classList.toggle('dots-beach--active');
-  }
-  if (e.target.closest('.dots-beach--active')) {
-    dotsBeachWrapper.innerHTML = `
-              <div class="beach-info">
-                  <div class="beach-info-wrapper">
-                    <a class="beach-info__location-name" href="#">Airlie Beach</a>
-                    <p class="beach-info__location-city">Australia</p>
-    
-                    <div class="beach-info__weather">
-                      <p class="beach-info__weather-wave">9 - 13</p>
-                      <p class="beach-info__weather-water">+2.3</p>
-                      <p class="beach-info__weather-wind">4 SE</p>
-                    </div>
+  // if (e.target.matches('span')) {
+  //   dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
+  //   // let dotsBeachWrapper = document.getElementById('dots-beach-wrapper');
+  //   // dotsCurrent.appendChild(dotsBeachWrapper);
+  // }
+  //потрібно зробити так, щоб div b spam був тільки один. попередні створені потрібно видаляти
+  // for (let i = 0; i < dotsBeach.length; i++) {
+  //   if (document.getElementById('dots-beach-wrapper') > 1) {
+  //     dotsBeach[i].innerHTML = '';
+  //   }
+  // }
+  // document.getElementById('dots-beach-wrapper').innerHTML = '';
+  for (let i = 0; i < dotsBeach.length; i++) {
+    if (dotsBeach[i].classList.contains('dots-beach--active')) {
+      // dotsCurrent.classList.remove('dots-beach--active');
+      if (dotsBeach[i].firstChild) {
+        dotsBeach[i].innerHTML = '';
+      }
+      dotsBeach[i].classList.remove('dots-beach--active');
+      // dotsBeach[i].removeChild(document.getElementById('dots-beach-wrapper'));
+    } else if (e.target.closest('span')) {
+      dotsCurrent.classList.add('dots-beach--active');
+      dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
+
+      document.getElementById('dots-beach-wrapper').innerHTML = `
+            <div class="beach-info">
+                <div class="beach-info-wrapper">
+                  <a class="beach-info__location-name" href="#">Airlie Beach</a>
+                  <p class="beach-info__location-city">Australia</p>
+
+                  <div class="beach-info__weather">
+                    <p class="beach-info__weather-wave">9 - 13</p>
+                    <p class="beach-info__weather-water">+2.3</p>
+                    <p class="beach-info__weather-wind">4 SE</p>
                   </div>
                 </div>
+              </div>
       `;
+    }
   }
+
+  // if (classList.contains('dots-beach-wrapper')) {
+  //   innerHTML = '';
+  // }
+
+  // if (e.target.closest('.dots-beach--active')) {
+  //   document.getElementById('dots-beach-wrapper').innerHTML = `
+  //               <div class="beach-info">
+  //                   <div class="beach-info-wrapper">
+  //                     <a class="beach-info__location-name" href="#">Airlie Beach</a>
+  //                     <p class="beach-info__location-city">Australia</p>
+
+  //                     <div class="beach-info__weather">
+  //                       <p class="beach-info__weather-wave">9 - 13</p>
+  //                       <p class="beach-info__weather-water">+2.3</p>
+  //                       <p class="beach-info__weather-wind">4 SE</p>
+  //                     </div>
+  //                   </div>
+  //                 </div>
+  //       `;
+  // }
 }
