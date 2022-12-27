@@ -94,6 +94,32 @@ $header__right: 2%;
     }
   }
 }
+.travel-suptitle {
+  right: $header__right;
+  text-align: left;
+  transform: translateY(-85px);
+  &__right {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 7.33333px;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    padding-right: 103px;
+    opacity: 0.5;
+    &::after {
+      top: 50%;
+      right: 0;
+      content: '';
+      width: 80px;
+      height: 1px;
+      position: absolute;
+      background: #ffffff;
+      opacity: 0.5;
+    }
+  }
+}
 
 .title {
   &__left {

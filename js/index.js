@@ -33,6 +33,15 @@ $(document).ready(function () {
     // centerMode: true,
     // variableWidth: true, //дозволяє робити задану ширину слайду
   });
+  $('.travel-slider').slick({
+    infinite: true,
+    speed: 500,
+    fade: true,
+    prevArrow:
+      '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
+    nextArrow:
+      '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
+  });
 });
 
 //weather
@@ -138,25 +147,4 @@ function changeDotsForm(e) {
       `;
     }
   }
-
-  // if (classList.contains('dots-beach-wrapper')) {
-  //   innerHTML = '';
-  // }
-
-  // if (e.target.closest('.dots-beach--active')) {
-  //   document.getElementById('dots-beach-wrapper').innerHTML = `
-  //               <div class="beach-info">
-  //                   <div class="beach-info-wrapper">
-  //                     <a class="beach-info__location-name" href="#">Airlie Beach</a>
-  //                     <p class="beach-info__location-city">Australia</p>
-
-  //                     <div class="beach-info__weather">
-  //                       <p class="beach-info__weather-wave">9 - 13</p>
-  //                       <p class="beach-info__weather-water">+2.3</p>
-  //                       <p class="beach-info__weather-wind">4 SE</p>
-  //                     </div>
-  //                   </div>
-  //                 </div>
-  //       `;
-  // }
 }
