@@ -95,6 +95,28 @@ let dots2 = document.getElementById('dots-2');
 let dots3 = document.getElementById('dots-3');
 let dots4 = document.getElementById('dots-4');
 
+let shopWrapperImage = document.getElementById('shop-wrapper-image');
+let burgerDots = document.querySelectorAll(
+  'div.shop-wrapper-image__dots-details'
+);
+let shopInfo = document.querySelector('shop-info');
+// for (let i = 0; i < burgerDots.length; i++) {
+//   burgerDots[i].addEventListener('click', shopDetails);
+// }
+
+//crutch2
+shopWrapperImage.addEventListener('click', shopDetails);
+
+function shopDetails(e) {
+  let dotsCurrent = e.target;
+  if (e.target.closest('div.shop-wrapper-image__dots-details')) {
+    for (let i = 0; i < burgerDots.length; i++) {
+      dotsCurrent.classList.toggle('active');
+      dotsCurrent.classList.toggle('open');
+    }
+  }
+}
+
 for (let i = 0; i < dotsBeach.length; i++) {
   console.log(dotsBeach[i].classList);
 }
