@@ -44,6 +44,26 @@ $(document).ready(function () {
   });
 });
 
+//swiper
+var swiper = new Swiper('.mySwiper', {
+  // loop: true,
+  spaceBetween: 4,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper('.mySwiper2', {
+  loop: true,
+  spaceBetween: 4,
+  navigation: {
+    nextEl: '.swiper-arrow-next',
+    prevEl: '.swiper-arrow-prev',
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+});
+
 //weather
 
 // fetch(
