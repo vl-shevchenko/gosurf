@@ -313,6 +313,14 @@ body {
   border-right: solid 1px rgba(255, 255, 255, 0.25);
   height: 100vh;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .line-animation {
@@ -345,18 +353,38 @@ body {
   z-index: 1;
 }
 
-.nav-bar {
-  padding-top: 25px;
+.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 290px;
+  min-width: 100px;
+  width: 100%;
+  height: 25%;
+}
+
+.nav-bar {
+  padding-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 290px;
+  min-width: 100px;
+  width: 100%;
+}
+.nav-bar__unlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 .nav-bar__item {
   display: -webkit-box;
@@ -366,7 +394,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 25px;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-align: center;
@@ -381,7 +408,6 @@ body {
   color: #ffffff;
 }
 .nav-bar__link {
-  padding-top: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -402,7 +428,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 25px;
 }
 .header-date {
   display: -webkit-box;
@@ -417,7 +442,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding-bottom: 25px;
 }
 .header-date__day {
   font-weight: 800;
@@ -570,6 +594,14 @@ body {
   font-weight: 400;
 }
 
+@media (max-width: 1280px) {
+  .swiper-dots-container {
+    max-width: 670px;
+  }
+  .dots-wrapper {
+    max-width: 145px;
+  }
+}
 .arrow-slider {
   position: absolute;
   top: 5%;
