@@ -348,7 +348,7 @@ body {
 
 .double-down-arrows {
   position: absolute;
-  left: 209px;
+  left: 15%;
   bottom: 40px;
   z-index: 1;
 }
@@ -600,6 +600,34 @@ body {
   }
   .dots-wrapper {
     max-width: 145px;
+  }
+}
+@media (max-width: 960px) {
+  .header__slider-suptitle {
+    top: calc(60% - 9px - 134.5px);
+    height: 18px;
+    line-height: 18px;
+  }
+  .header-suptitle__left {
+    font-size: 18px;
+  }
+  .header__slider-title {
+    top: calc(60% - 15px - 70.5px);
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .header__slider-suptext {
+    top: calc(55% - 9px + 36.5px);
+    line-height: 18px;
+    height: 18px;
+  }
+  .header__slider-text {
+    top: calc(55% - 30px + 79.5px);
+    height: 60px;
+    line-height: 60px;
+  }
+  .header__slider-link {
+    top: calc(55% - 10px + 143px);
   }
 }
 .arrow-slider {
@@ -1216,6 +1244,8 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .shop-wrapper-style {
@@ -1436,9 +1466,6 @@ body {
   left: -330px;
 }
 
-.shop-wrapper-extras {
-  padding-top: 469px;
-}
 .shop-wrapper-extras__title {
   font-family: "Fira Sans";
   font-style: normal;

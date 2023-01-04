@@ -557,6 +557,7 @@ $header__right: 5%;
     height: 800px;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
 .shop-wrapper-style {
@@ -743,7 +744,6 @@ $header__right: 5%;
 
 //extras
 .shop-wrapper-extras {
-  padding-top: 469px;
   &__title {
     font-family: 'Fira Sans';
     font-style: normal;
