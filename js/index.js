@@ -53,6 +53,10 @@ var swiper = new Swiper('.mySwiper', {
   watchSlidesProgress: true,
 });
 var swiper2 = new Swiper('.mySwiper2', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
   loop: true,
   spaceBetween: 4,
   navigation: {
@@ -63,6 +67,17 @@ var swiper2 = new Swiper('.mySwiper2', {
     swiper: swiper,
   },
 });
+
+//mobile menu
+const burger = document.querySelector('#burger');
+const popup = document.querySelector('#popup');
+
+burger.addEventListener('click', burgerHandler);
+function burgerHandler(e) {
+  popup.classList.toggle('open');
+  burger.classList.toggle('active');
+  burger.parentElement.classList.toggle('active');
+}
 
 //weather
 
