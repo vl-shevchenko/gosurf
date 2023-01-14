@@ -134,16 +134,10 @@
             <div class="swiper-slide">
               <div class="header-swiper-slide header-swiper-slide__north">
                 <div class="header-swiper-slide__info-wrapper">
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Surf
-                  </p>
+                  <p class="subtitle subtitle-header">Surf</p>
                   <p class="header-swiper-slide__title">North Shore</p>
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Condition
-                  </p>
-                  <p class="header-swiper-slide__text header-title__left">
-                    Radical
-                  </p>
+                  <p class="subtitle subtitle-header">Condition</p>
+                  <p class="title title-header">Radical</p>
                   <a href="#" class="header-swiper-slide__link">
                     <img src="images/arrow-right.svg" alt="" />
                   </a>
@@ -153,16 +147,10 @@
             <div class="swiper-slide">
               <div class="header-swiper-slide header-swiper-slide__south">
                 <div class="header-swiper-slide__info-wrapper">
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Surf
-                  </p>
+                  <p class="subtitle subtitle-header">Surf</p>
                   <p class="header-swiper-slide__title">South Shore</p>
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Condition
-                  </p>
-                  <p class="header-swiper-slide__text header-title__left">
-                    Radical
-                  </p>
+                  <p class="subtitle subtitle-header">Condition</p>
+                  <p class="title title-header">Radical</p>
                   <a href="#" class="header-swiper-slide__link">
                     <img src="images/arrow-right.svg" alt="" />
                   </a>
@@ -172,16 +160,10 @@
             <div class="swiper-slide">
               <div class="header-swiper-slide header-swiper-slide__west">
                 <div class="header-swiper-slide__info-wrapper">
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Surf
-                  </p>
+                  <p class="subtitle subtitle-header">Surf</p>
                   <p class="header-swiper-slide__title">West Shore</p>
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Condition
-                  </p>
-                  <p class="header-swiper-slide__text header-title__left">
-                    Radical
-                  </p>
+                  <p class="subtitle subtitle-header">Condition</p>
+                  <p class="title title-header">Radical</p>
                   <a href="#" class="header-swiper-slide__link">
                     <img src="images/arrow-right.svg" alt="" />
                   </a>
@@ -191,16 +173,10 @@
             <div class="swiper-slide">
               <div class="header-swiper-slide header-swiper-slide__east">
                 <div class="header-swiper-slide__info-wrapper">
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Surf
-                  </p>
+                  <p class="subtitle subtitle-header">Surf</p>
                   <p class="header-swiper-slide__title">East Shore</p>
-                  <p class="header-swiper-slide__subtext header-subtitle__left">
-                    Condition
-                  </p>
-                  <p class="header-swiper-slide__text header-title__left">
-                    Radical
-                  </p>
+                  <p class="subtitle subtitle-header">Condition</p>
+                  <p class="title title-header">Radical</p>
                   <a href="#" class="header-swiper-slide__link">
                     <img src="images/arrow-right.svg" alt="" />
                   </a>
@@ -325,35 +301,51 @@
         </div>
       </div>
     </header>
-
-    <div class="container">
+    <main class="main">
       <section class="surf" id="surf">
-        <div class="section__wrapper">
-          <div class="title">
-            surf
-            <p class="title__suptitle">surf</p>
-          </div>
-          <div class="suptitle">
-            <div class="suptitle__left">Current location</div>
-            <div class="title__left">
-              California <span class="title__left-span">|</span> USA
+        <div class="section-wrapper">
+          <p class="section-title">surf</p>
+          <div class="title-wrapper">
+            <div class="subtitle">Current location</div>
+            <div class="title">
+              California <span class="title__span">|</span> USA
             </div>
           </div>
 
           <div class="world-map-wrapper" id="world-map">
-            <p class="coordinates-beach">34.0501&deg N -118.2446&deg W</p>
+            <div class="dots-beach-mobile-info__wrapper">
+              <a class="dots-beach-mobile-info__location-name" href="#"
+                >Airlie Beach</a
+              >
+              <p class="dots-beach-mobile-info__location-city">Australia</p>
+              <div class="dots-beach-mobile-info__weather">
+                <p class="dots-beach-mobile-info__weather-wave">9 - 13</p>
+                <p class="dots-beach-mobile-info__weather-water">+2.3</p>
+                <p class="dots-beach-mobile-info__weather-wind">4 SE</p>
+              </div>
+            </div>
 
-            <span class="dots-beach dots-malibu" id="dots-malibu"></span>
-            <span class="dots-beach dots-airlie" id="dots-airlie"></span>
-            <span class="dots-beach dots-cloud" id="dots-cloud"></span>
-            <span class="dots-beach dots-vieux" id="dots-vieux"></span>
-            <span class="dots-beach dots-1" id="dots-1"></span>
-            <span class="dots-beach dots-2" id="dots-2"></span>
-            <span class="dots-beach dots-3" id="dots-3"></span>
-            <span class="dots-beach dots-4" id="dots-4"></span>
-            /*crutch */
-            <span class="dots-beach dots-5" id="dots-5"></span>
+            <img
+              class="world-map"
+              src="/images/surf/world-map.png"
+              alt="world map"
+            />
+            <p class="coordinates-beach">34.0501&deg N -118.2446&deg W</p>
+            <div class="dots-wrapper-wrapper">
+              <span class="dots-beach dots-malibu" id="dots-malibu"></span>
+              <span class="dots-beach dots-airlie" id="dots-airlie"></span>
+              <span class="dots-beach dots-cloud" id="dots-cloud"></span>
+              <span class="dots-beach dots-vieux" id="dots-vieux"></span>
+              <span class="dots-beach dots-1" id="dots-1"> </span>
+              <span class="dots-beach dots-2" id="dots-2"></span>
+              <span class="dots-beach dots-3" id="dots-3"></span>
+              <span class="dots-beach dots-4" id="dots-4"></span>
+              <!--crutch -->
+              <span class="dots-beach dots-5" id="dots-5"></span>
+            </div>
           </div>
+        </div>
+      </section>
           <div class="surf-slider">
             <div class="slider-box">
               <div class="slider-box__inner">

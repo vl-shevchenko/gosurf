@@ -62,6 +62,91 @@ body {
   color: #ffffff;
 }
 
+.section-wrapper {
+  height: 100%;
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.title-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+  right: 20px;
+  position: absolute;
+}
+
+.subtitle {
+  position: relative;
+  font-size: 22px;
+  line-height: 145%;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 110px;
+}
+.subtitle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: #ffffff;
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 215%;
+  text-transform: uppercase;
+}
+.title__span {
+  font-weight: 250;
+}
+
+.section-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 150%;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 15%;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 1px;
+  background-color: #4af6cd;
+}
+.section-title::after {
+  content: "surf";
+  text-transform: uppercase;
+  position: absolute;
+  font-weight: 800;
+  font-size: 200px;
+  line-height: 78%;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.02;
+  bottom: -83px;
+  left: -294px;
+}
+
 .header-suptitle__left {
   font-size: 22px;
   letter-spacing: 7.33333px;
@@ -90,36 +175,6 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.title {
-  position: relative;
-  font-weight: 800;
-  font-size: 200px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.1254901961);
-  display: inline-block;
-  -webkit-transform: translateX(-50px);
-      -ms-transform: translateX(-50px);
-          transform: translateX(-50px);
-}
-.title__suptitle {
-  position: absolute;
-  font-weight: 800;
-  font-size: 80px;
-  top: 0;
-  right: -10px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.title__suptitle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 1px;
-  background-color: #4af6cd;
 }
 
 .suptitle {
@@ -635,6 +690,539 @@ body {
   margin-right: 7px;
 }
 
+.world-map-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10% auto 60px;
+  max-width: 1200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.world-map {
+  width: 100%;
+  max-width: 1280px;
+  min-width: 250px;
+  height: auto;
+  max-height: 634px;
+  min-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.coordinates-beach {
+  position: absolute;
+  top: calc(50% - 187.5px);
+  right: 1%;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  white-space: nowrap;
+  opacity: 0.5;
+}
+
+.dots-beach-mobile-info__wrapper {
+  position: absolute;
+  padding: 24px 32px;
+  gap: 15px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 216px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(15, 16, 16, 0.768627451)), to(transparent));
+  background: -o-linear-gradient(top, rgba(15, 16, 16, 0.768627451) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(15, 16, 16, 0.768627451) 0%, transparent 100%);
+  top: -223px;
+}
+.dots-beach-mobile-info__location-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.dots-beach-mobile-info__location-name::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 14px;
+  top: calc(50% - 7px);
+  background-image: url(../images/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0;
+}
+.dots-beach-mobile-info__location-city {
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
+}
+.dots-beach-mobile-info__location-city::after {
+  content: "";
+  position: absolute;
+  background: #4af6cd;
+  width: 80px;
+  height: 1px;
+  left: 0;
+}
+.dots-beach-mobile-info__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.dots-beach-mobile-info__weather-wave {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-wave::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/wave.svg);
+}
+.dots-beach-mobile-info__weather-wave::after {
+  content: "Surf (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-mobile-info__weather-water {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-water::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/water.svg);
+}
+.dots-beach-mobile-info__weather-water::after {
+  content: "Tide (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-mobile-info__weather-wind {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-mobile-info__weather-wind::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/wind.svg);
+}
+.dots-beach-mobile-info__weather-wind::after {
+  content: "Wind (KTS)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+
+.dots-beach-wrapper {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -6px;
+  left: 220px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.dots-beach {
+  position: absolute;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #4af6cd;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.dots-beach:hover {
+  -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+          box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+}
+.dots-beach.active {
+  border-radius: 60% 5% 60% 70%;
+  z-index: 2;
+}
+
+.dots-beach:nth-child(1).active > .dots-beach-wrapper {
+  top: 95px;
+  left: 320px;
+}
+
+.dots-beach:nth-child(8).active > .dots-beach-wrapper {
+  top: -101px;
+  left: 122px;
+}
+
+.dots-malibu {
+  top: 54%;
+  left: 0;
+}
+
+.dots-airlie {
+  top: 44%;
+  left: 11%;
+}
+
+.dots-cloud {
+  top: 50%;
+  left: 28%;
+}
+
+.dots-vieux {
+  top: 79%;
+  left: 34%;
+}
+
+.dots-1 {
+  top: 33%;
+  left: 45%;
+}
+
+.dots-2 {
+  top: 86%;
+  left: 53%;
+}
+
+.dots-3 {
+  top: 62%;
+  left: 68%;
+}
+
+.dots-4 {
+  top: 73%;
+  left: 89%;
+  z-index: 1;
+}
+
+.dots-5 {
+  top: 73%;
+  left: 89%;
+  z-index: 0;
+}
+
+.dots-beach-info__wrapper {
+  position: relative;
+  padding: 24px 32px;
+  gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 283px;
+  height: 216px;
+  background: rgba(15, 16, 16, 0.768627451);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: 6px;
+}
+.dots-beach-info__location-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+.dots-beach-info__location-name::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 14px;
+  top: calc(50% - 7px);
+  background-image: url(../images/arrow-right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 0;
+}
+.dots-beach-info__location-city {
+  position: relative;
+  font-size: 16px;
+  line-height: 32px;
+}
+.dots-beach-info__location-city::after {
+  content: "";
+  position: absolute;
+  background: #4af6cd;
+  width: 80px;
+  height: 1px;
+  left: 0;
+}
+.dots-beach-info__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.dots-beach-info__weather-wave {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-wave::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/wave.svg);
+}
+.dots-beach-info__weather-wave::after {
+  content: "Surf (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-info__weather-water {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-water::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/water.svg);
+}
+.dots-beach-info__weather-water::after {
+  content: "Tide (FT)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+.dots-beach-info__weather-wind {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 800;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.dots-beach-info__weather-wind::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-image: url(../images/surf/info-beach/wind.svg);
+}
+.dots-beach-info__weather-wind::after {
+  content: "Wind (KTS)";
+  position: absolute;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  white-space: nowrap;
+  bottom: 0;
+}
+
 @media (max-width: 1280px) {
   .swiper-dots-container {
     max-width: 800px;
@@ -679,18 +1267,27 @@ body {
     width: 300px;
     font-size: 120px;
   }
-  .header-swiper-slide__subtext {
-    font-size: 20px;
+  .subtitle {
+    letter-spacing: 4px;
+    font-size: 15px;
     padding-left: 55px;
   }
-  .header-swiper-slide__subtext::before {
+  .subtitle::before {
     width: 40px;
+  }
+  .subtitle-header {
+    font-size: 20px;
   }
   .header-swiper-slide__title {
     font-size: 40px;
   }
-  .header-swiper-slide__text {
+  .title {
     font-size: 30px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  .title-header {
+    font-weight: 800;
   }
   .swiper-dots-container {
     max-width: 600px;
@@ -714,6 +1311,7 @@ body {
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     background: rgba(20, 56, 47, 0.2509803922);
+    position: fixed;
   }
   .header__asside.open {
     left: 0;
@@ -737,7 +1335,7 @@ body {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    position: absolute;
+    position: fixed;
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
   }
@@ -811,10 +1409,19 @@ body {
     height: 1px;
     left: -10px;
   }
-}
-@media (max-width: 759px) {
-  .swiper-dots-container {
-    display: none;
+  .section-title {
+    font-weight: 800;
+    font-size: 50px;
+  }
+  .section-title::before {
+    width: 30px;
+  }
+  .section-title::after {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 78%;
+    bottom: -43px;
+    left: -118px;
   }
   .header__map-svg {
     width: 60%;
@@ -822,18 +1429,54 @@ body {
     max-height: 340px;
   }
 }
+@media (max-width: 853px) {
+  .coordinates-beach {
+    display: none;
+  }
+  .dots-beach-mobile-info__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .world-map-wrapper {
+    margin: 300px auto 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dots-beach-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 759px) {
+  .swiper-dots-container {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .dots-beach {
+    width: 15px;
+    height: 15px;
+  }
+}
 @media (max-width: 480px) {
   .logo {
     display: none;
+  }
+  .header__map-svg {
+    width: 90%;
+    height: 35%;
   }
 }
 @media (max-width: 414px) {
   .header__title {
     display: none;
   }
+}
+@media (max-width: 375px) {
   .header__map-svg {
-    width: 90%;
-    height: 35%;
+    display: none;
   }
 }
 .arrow-slider {
@@ -860,352 +1503,6 @@ body {
   color: #ffffff;
   max-width: 100%;
   min-width: 0;
-}
-
-.surf {
-  background-image: url(../images/surf/poi-bg.svg);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: 112% 200px;
-}
-
-.world-map-wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto 60px;
-  max-width: 1200px;
-  min-height: 635px;
-  background-image: url(../images/surf/world-map.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.coordinates-beach {
-  position: absolute;
-  left: 98%;
-  top: calc(50% - 12.5px + 185px);
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 8px;
-  white-space: nowrap;
-  opacity: 0.5;
-  width: 0;
-  height: 0;
-}
-
-.dots-beach-wrapper {
-  position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  top: -205px;
-  left: -24px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.beach-info-wrapper {
-  margin: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.beach-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  width: 285px;
-  height: 215px;
-  background: rgba(15, 16, 16, 0.768627451);
-  mix-blend-mode: normal;
-  border-radius: 6px;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-.beach-info__location-name {
-  position: relative;
-  font-size: 18px;
-  line-height: 22px;
-  /* identical to box height */
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 25px;
-}
-.beach-info__location-name::after {
-  content: "";
-  position: absolute;
-  width: 17px;
-  height: 14px;
-  top: 50%;
-  background-image: url(../images/arrow-right.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding-left: 110px;
-}
-.beach-info__location-city {
-  position: relative;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
-}
-.beach-info__location-city::after {
-  content: "";
-  position: absolute;
-  background: #4af6cd;
-  width: 80px;
-  height: 1px;
-  top: -8px;
-  left: 0;
-}
-.beach-info__weather {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.beach-info__weather-wave {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 50px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #ffffff;
-}
-.beach-info__weather-wave::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  top: -15px;
-  background-image: url(../images/surf/info-beach/wave.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.beach-info__weather-wave::after {
-  content: "Surf (FT)";
-  position: absolute;
-  top: 30px;
-  width: 42px;
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.beach-info__weather-water {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 50px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #ffffff;
-}
-.beach-info__weather-water::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  top: -15px;
-  background-image: url(../images/surf/info-beach/water.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.beach-info__weather-water::after {
-  content: "Surf (FT)";
-  position: absolute;
-  top: 30px;
-  width: 42px;
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.beach-info__weather-wind {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 50px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  color: #ffffff;
-}
-.beach-info__weather-wind::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  top: -15px;
-  background-image: url(../images/surf/info-beach/wind.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.beach-info__weather-wind::after {
-  content: "Surf (FT)";
-  position: absolute;
-  top: 30px;
-  width: 42px;
-  font-weight: 300;
-  font-size: 10px;
-  line-height: 12px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.dots-beach {
-  position: absolute;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  background-color: #4af6cd;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s;
-  cursor: pointer;
-  z-index: 1;
-}
-.dots-beach:hover {
-  -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-          box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-}
-.dots-beach--active {
-  position: absolute;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  background-color: #4af6cd;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transition: all 0.7s;
-  -o-transition: all 0.7s;
-  transition: all 0.7s;
-  cursor: pointer;
-  border-radius: 60% 5% 60% 70%;
-  -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-          box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
-}
-
-.dots-malibu {
-  top: 54%;
-  left: 0;
-}
-
-.dots-airlie {
-  top: 44%;
-  left: 11%;
-}
-
-.dots-cloud {
-  top: 50%;
-  left: 28%;
-}
-
-.dots-vieux {
-  top: 79%;
-  left: 34%;
-}
-
-.dots-1 {
-  top: 33%;
-  left: 45%;
-}
-
-.dots-2 {
-  top: 86%;
-  left: 53%;
-}
-
-.dots-3 {
-  top: 62%;
-  left: 68%;
-}
-
-.dots-4 {
-  top: 73%;
-  left: 89%;
-  z-index: 1;
-}
-
-.dots-5 {
-  top: 73%;
-  left: 89%;
-  z-index: 0;
 }
 
 .slick-slide:nth-child(4n+1) .slider-box__inner {

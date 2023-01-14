@@ -176,31 +176,27 @@ function changeDotsForm(e) {
   //   }
   // }
   // document.getElementById('dots-beach-wrapper').innerHTML = '';
+
   for (let i = 0; i < dotsBeach.length; i++) {
-    if (dotsBeach[i].classList.contains('dots-beach--active')) {
-      // dotsCurrent.classList.remove('dots-beach--active');
+    if (dotsBeach[i].classList.contains('active')) {
       if (dotsBeach[i].firstChild) {
         dotsBeach[i].innerHTML = '';
       }
-      dotsBeach[i].classList.remove('dots-beach--active');
-      // dotsBeach[i].removeChild(document.getElementById('dots-beach-wrapper'));
+      dotsBeach[i].classList.remove('active');
     } else if (e.target.closest('span')) {
-      dotsCurrent.classList.add('dots-beach--active');
+      dotsCurrent.classList.add('active');
       dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
 
       document.getElementById('dots-beach-wrapper').innerHTML = `
-            <div class="beach-info">
-                <div class="beach-info-wrapper">
-                  <a class="beach-info__location-name" href="#">Airlie Beach</a>
-                  <p class="beach-info__location-city">Australia</p>
-
-                  <div class="beach-info__weather">
-                    <p class="beach-info__weather-wave">9 - 13</p>
-                    <p class="beach-info__weather-water">+2.3</p>
-                    <p class="beach-info__weather-wind">4 SE</p>
-                  </div>
-                </div>
+            <div class="dots-beach-info__wrapper">
+              <a class="dots-beach-info__location-name" href="#">Airlie Beach</a>
+              <p class="dots-beach-info__location-city">Australia</p>
+              <div class="dots-beach-info__weather">
+                <p class="dots-beach-info__weather-wave">9 - 13</p>
+                <p class="dots-beach-info__weather-water">+2.3</p>
+                <p class="dots-beach-info__weather-wind">4 SE</p>
               </div>
+            </div>
       `;
     }
   }

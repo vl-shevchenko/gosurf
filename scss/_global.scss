@@ -1,5 +1,87 @@
 $header__right: 5%;
 
+.main {
+  //   margin: 0 auto;
+}
+.section-wrapper {
+  height: 100%;
+  max-width: 1480px;
+  padding: 0 20px;
+  margin: 100px auto;
+  position: relative;
+}
+
+//title
+.title-wrapper {
+  width: fit-content;
+  text-align: right;
+  right: 20px;
+  position: absolute;
+}
+.subtitle {
+  position: relative;
+  font-size: 22px;
+  line-height: 145%;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  width: fit-content;
+  padding-left: 110px;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: #ffffff;
+    opacity: 0.5;
+  }
+}
+.title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 215%;
+  text-transform: uppercase;
+  &__span {
+    font-weight: 250;
+  }
+}
+
+//section title
+.section-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 150%;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-left: 15%;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 1px;
+    background-color: #4af6cd;
+  }
+  &::after {
+    content: 'surf';
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 800;
+    font-size: 200px;
+    line-height: 78%;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.02;
+    bottom: -83px;
+    left: -294px;
+  }
+}
+
 .header-suptitle__left {
   font-size: 22px;
   // line-height: 32px;
@@ -32,35 +114,35 @@ $header__right: 5%;
   margin: 0 auto;
 }
 
-.title {
-  position: relative;
-  font-weight: 800;
-  font-size: 200px;
-  text-transform: uppercase;
-  color: #ffffff20;
-  // opacity: 0.02;
-  display: inline-block;
-  transform: translateX(-50px);
-  &__suptitle {
-    position: absolute;
-    font-weight: 800;
-    font-size: 80px;
-    top: 0;
-    right: -10px;
-    text-transform: uppercase;
-    color: #ffffff;
+// .title {
+//   position: relative;
+//   font-weight: 800;
+//   font-size: 200px;
+//   text-transform: uppercase;
+//   color: #ffffff20;
+//   // opacity: 0.02;
+//   display: inline-block;
+//   transform: translateX(-50px);
+//   &__suptitle {
+//     position: absolute;
+//     font-weight: 800;
+//     font-size: 80px;
+//     top: 0;
+//     right: -10px;
+//     text-transform: uppercase;
+//     color: #ffffff;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 80px;
-      height: 1px;
-      background-color: #4af6cd;
-    }
-  }
-}
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       width: 80px;
+//       height: 1px;
+//       background-color: #4af6cd;
+//     }
+//   }
+// }
 
 .suptitle {
   right: $header__right;
