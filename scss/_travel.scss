@@ -1,0 +1,21 @@
+.slider__title-travel {
+  padding-right: 70px;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 42px;
+    background-image: url(../images/travel/virgin.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.total-price-travel {
+  &::after {
+    content: 'Round Trip';
+  }
+}

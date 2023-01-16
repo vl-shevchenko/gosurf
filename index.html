@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
@@ -18,18 +18,11 @@
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Go Surf</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-container">
         <div class="header__map">
           <svg
@@ -232,9 +225,9 @@
 
         <div class="header__asside" id="popup">
           <div class="logo">
-            <p class="logo__title">
+            <a class="logo__title" href="#header">
               Go <span class="logo__title-span">surf</span>
-            </p>
+            </a>
           </div>
 
           <nav class="nav-bar">
@@ -304,7 +297,7 @@
     <main class="main">
       <section class="surf" id="surf">
         <div class="section-wrapper">
-          <p class="section-title">surf</p>
+          <p class="section-title section-title__surf">surf</p>
           <div class="title-wrapper">
             <div class="subtitle">Current location</div>
             <div class="title">
@@ -327,526 +320,383 @@
 
             <img
               class="world-map"
-              src="/images/surf/world-map.png"
+              src="images/surf/world-map.png"
               alt="world map"
             />
             <p class="coordinates-beach">34.0501&deg N -118.2446&deg W</p>
-            <div class="dots-wrapper-wrapper">
-              <span class="dots-beach dots-malibu" id="dots-malibu"></span>
-              <span class="dots-beach dots-airlie" id="dots-airlie"></span>
-              <span class="dots-beach dots-cloud" id="dots-cloud"></span>
-              <span class="dots-beach dots-vieux" id="dots-vieux"></span>
-              <span class="dots-beach dots-1" id="dots-1"> </span>
-              <span class="dots-beach dots-2" id="dots-2"></span>
-              <span class="dots-beach dots-3" id="dots-3"></span>
-              <span class="dots-beach dots-4" id="dots-4"></span>
-              <!--crutch -->
-              <span class="dots-beach dots-5" id="dots-5"></span>
-            </div>
+
+            <span class="dots-beach dots-malibu" id="dots-malibu"></span>
+            <span class="dots-beach dots-airlie" id="dots-airlie"></span>
+            <span class="dots-beach dots-cloud" id="dots-cloud"></span>
+            <span class="dots-beach dots-vieux" id="dots-vieux"></span>
+            <span class="dots-beach dots-1" id="dots-1"> </span>
+            <span class="dots-beach dots-2" id="dots-2"></span>
+            <span class="dots-beach dots-3" id="dots-3"></span>
+            <span class="dots-beach dots-4" id="dots-4"></span>
+            <!--crutch -->
+            <span class="dots-beach dots-5" id="dots-5"></span>
           </div>
-        </div>
-      </section>
-          <div class="surf-slider">
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Malibu Beach</div>
-                <div class="slider-box__location">
-                  California
-                  <span class="slider-box__location-span">|</span> USA
+
+          <div class="swiper mySwiper-surf">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Malibu Beach</div>
+                  <div class="slider-box__location">
+                    California
+                    <span class="slider-box__location-span">|</span> USA
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
                 </div>
-                <div class="btn-box">
-                  <a class="btn-box__title" href="#">
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing2.jpeg"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Airlie Beach</div>
+                  <div class="slider-box__location">
+                    Queensland
+                    <span class="slider-box__location-span">|</span> Australia
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing3.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Cloud Nine</div>
+                  <div class="slider-box__location">
+                    Siargao
+                    <span class="slider-box__location-span">|</span> Philippines
+                  </div>
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing4.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Vieux Boucau</div>
+                  <div class="slider-box__location">
+                    Hossegor
+                    <span class="slider-box__location-span">|</span>France
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Malibu Beach</div>
+                  <div class="slider-box__location">
+                    California
+                    <span class="slider-box__location-span">|</span> USA
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing4.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Vieux Boucau</div>
+                  <div class="slider-box__location">
+                    Hossegor
+                    <span class="slider-box__location-span">|</span>France
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing2.jpeg"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Airlie Beach</div>
+                  <div class="slider-box__location">
+                    Queensland
+                    <span class="slider-box__location-span">|</span> Australia
+                  </div>
+
+                  <a class="slider-box__btn btn-box__title">
+                    View <span class="btn-box__title-span">surf</span>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-box">
+                  <img
+                    class="slider-box__inner-img"
+                    src="images/surf/surf-slider/surfing3.png"
+                    alt="Beach"
+                  />
+                  <div class="slider-box__beach-name">Cloud Nine</div>
+                  <div class="slider-box__location">
+                    Siargao
+                    <span class="slider-box__location-span">|</span> Philippines
+                  </div>
+                  <a class="slider-box__btn btn-box__title">
                     View <span class="btn-box__title-span">surf</span>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing2.jpeg"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Airlie Beach</div>
-                <div class="slider-box__location">
-                  Queensland
-                  <span class="slider-box__location-span">|</span> Australia
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing3.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Cloud Nine</div>
-                <div class="slider-box__location">
-                  Siargao
-                  <span class="slider-box__location-span">|</span> Philippines
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing4.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Vieux Boucau</div>
-                <div class="slider-box__location">
-                  Hossegor
-                  <span class="slider-box__location-span">|</span>France
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing5.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Malibu Beach</div>
-                <div class="slider-box__location">
-                  California
-                  <span class="slider-box__location-span">|</span> USA
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing2.jpeg"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Airlie Beach</div>
-                <div class="slider-box__location">
-                  Queensland
-                  <span class="slider-box__location-span">|</span> Australia
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing3.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Cloud Nine</div>
-                <div class="slider-box__location">
-                  Siargao
-                  <span class="slider-box__location-span">|</span> Philippines
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-box">
-              <div class="slider-box__inner">
-                <img
-                  class="slider-box__inner-img"
-                  src="images/surf/surf-slider/surfing4.png"
-                  alt="Beach"
-                />
-                <div class="slider-box__beach-name">Vieux Boucau</div>
-                <div class="slider-box__location">
-                  Hossegor
-                  <span class="slider-box__location-span">|</span>France
-                </div>
-                <div class="btn-box">
-                  <p class="btn-box__title">
-                    View <span class="btn-box__title-span">surf</span>
-                  </p>
-                </div>
-              </div>
+            <div class="arrow-wrapper">
+              <img
+                class="swiper-arrow-slider swiper-arrow-prev"
+                src="images/arrow-right.svg"
+                alt=""
+              />
+              <img
+                class="swiper-arrow-slider swiper-arrow-next"
+                src="images/arrow-right.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section class="travel" id="travel">
-        <div class="section__wrapper">
-          <div class="title">
-            travel
-            <p class="title__suptitle">travel</p>
-          </div>
-          <div class="suptitle">
-            <div class="suptitle__left">Shore</div>
-            <div class="title__left">
-              Airlie Beach <span class="title__left-span">|</span> Australia
+        <div class="section-wrapper">
+          <p class="section-title section-title__travel">travel</p>
+          <div class="title-wrapper">
+            <div class="subtitle">Shore</div>
+            <div class="title">
+              Airlie Beach<span class="title__span">|</span>Australia
             </div>
           </div>
-          <div class="travel-slider">
-            <div class="travel-slider__container">
-              <img
-                src="images/travel/bg.png"
-                alt=""
-                class="travel-slider__img"
-              />
-              <div class="travel-slider-wrapper">
-                <div class="travel-suptitle">
-                  <div class="travel-suptitle__right">Airline</div>
-                  <div class="title__left">Virgin Australia</div>
-                </div>
-                <div class="travel-slider__infoblock-wrapper">
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Destination</div>
-                    <div class="travel-slider__title">Queensland Australia</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Distance</div>
-                    <div class="travel-slider__title">7,065 Miles</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Travel Time</div>
-                    <div class="travel-slider__title">23 Hours 5 Minutes</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Pricing</div>
-                    <div class="travel-slider__title">$1,976 USD</div>
-                    <div class="travel-slider__suptitle-round-trip">
-                      Round Trip
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box-travel">
-                  <p class="btn-box__title">
-                    Book <span class="btn-box__title-span">Flight</span>
-                  </p>
+
+          <div class="slider__container">
+            <img src="images/travel/bg.png" alt="" class="slider__img" />
+
+            <div class="slider__infoblock-wrapper">
+              <div class="slider__title-wrapper">
+                <div class="slider__subtitle subtitle">Airline</div>
+                <div class="slider__title title slider__title-travel">
+                  Virgin Australia
                 </div>
               </div>
-            </div>
-            <div class="travel-slider__container">
-              <img
-                src="images/travel/bg.png"
-                alt=""
-                class="travel-slider__img"
-              />
-              <div class="travel-slider-wrapper">
-                <div class="travel-suptitle">
-                  <div class="travel-suptitle__right">Airline</div>
-                  <div class="title__left">Virgin Australia</div>
-                </div>
-                <div class="travel-slider__infoblock-wrapper">
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Destination</div>
-                    <div class="travel-slider__title">Queensland Australia</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Distance</div>
-                    <div class="travel-slider__title">7,065 Miles</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Travel Time</div>
-                    <div class="travel-slider__title">23 Hours 5 Minutes</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Pricing</div>
-                    <div class="travel-slider__title">$1,976 USD</div>
-                    <div class="travel-slider__suptitle-round-trip">
-                      Round Trip
-                    </div>
+
+              <div class="slider__block-wrapper">
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Destination</div>
+                  <div class="slider__infoblock-title">
+                    Queensland Australia
                   </div>
                 </div>
-                <div class="btn-box-travel">
-                  <p class="btn-box__title">
-                    Book <span class="btn-box__title-span">Flight</span>
-                  </p>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Distance</div>
+                  <div class="slider__infoblock-title">7,065 Miles</div>
+                </div>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Travel Time</div>
+                  <div class="slider__infoblock-title">
+                    23 Hours<br />
+                    5 Minutes
+                  </div>
+                </div>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Pricing</div>
+                  <div
+                    class="slider__infoblock-title slider__result total-price-travel"
+                  >
+                    $1,976 USD
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="travel-slider__container">
-              <img
-                src="images/travel/bg.png"
-                alt=""
-                class="travel-slider__img"
-              />
-              <div class="travel-slider-wrapper">
-                <div class="travel-suptitle">
-                  <div class="travel-suptitle__right">Airline</div>
-                  <div class="title__left">Virgin Australia</div>
-                </div>
-                <div class="travel-slider__infoblock-wrapper">
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Destination</div>
-                    <div class="travel-slider__title">Queensland Australia</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Distance</div>
-                    <div class="travel-slider__title">7,065 Miles</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Travel Time</div>
-                    <div class="travel-slider__title">23 Hours 5 Minutes</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Pricing</div>
-                    <div class="travel-slider__title">$1,976 USD</div>
-                    <div class="travel-slider__suptitle-round-trip">
-                      Round Trip
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box-travel">
-                  <p class="btn-box__title">
-                    Book <span class="btn-box__title-span">Flight</span>
-                  </p>
-                </div>
-              </div>
+              <a class="btn-box__title">
+                Book<span class="btn-box__title-span">Flight</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
-
       <section class="sleep" id="sleep">
-        <div class="section__wrapper">
-          <div class="title">
-            sleep
-            <p class="title__suptitle">sleep</p>
+        <div class="section-wrapper">
+          <p class="section-title section-title__sleep">Sleep</p>
+          <div class="title-wrapper">
+            <div class="subtitle">Resorts</div>
+            <div class="title">
+              Auberge<span class="title__span">|</span>Australia
+            </div>
           </div>
 
-          <div class="travel-slider">
-            <div class="travel-slider__container">
-              <div class="sleep-slider-title suptitle">
-                <div class="suptitle__left">Resorts</div>
-                <div class="title__left">
-                  Auberge <span class="title__left-span">|</span> Australia
+          <div class="slider__container">
+            <img
+              src="images/sleep/sleep-image.png"
+              alt=""
+              class="slider__img"
+            />
+
+            <div class="slider__infoblock-wrapper">
+              <div class="slider__title-wrapper">
+                <div class="slider__subtitle subtitle">Rating</div>
+
+                <div class="slider__title title">Excellent</div>
+              </div>
+
+              <div class="slider__block-wrapper">
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Resort</div>
+                  <div class="slider__infoblock-title">Auberge Australia</div>
+                </div>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle"># of Nights</div>
+                  <div class="slider__infoblock-title">5 Nights</div>
+                </div>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle"># of Guests</div>
+                  <div class="slider__infoblock-title">4 Guests</div>
+                </div>
+                <div class="slider__infoblock">
+                  <div class="slider__infoblock-subtitle">Pricing</div>
+                  <div
+                    class="slider__infoblock-title slider__result total-price"
+                  >
+                    $349 USD
+                  </div>
                 </div>
               </div>
-              <img
-                src="images/sleep/sleep-image.png"
-                alt=""
-                class="travel-slider__img"
-              />
-              <div class="travel-slider-wrapper">
-                <div class="travel-suptitle">
-                  <div class="travel-suptitle__right">Rating</div>
-                  <div class="title__left">Excellent</div>
-                </div>
-                <div class="travel-slider__infoblock-wrapper">
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Resort</div>
-                    <div class="travel-slider__title">Auberge Australia</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle"># of Nights</div>
-                    <div class="travel-slider__title">5 Nights</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle"># of Guests</div>
-                    <div class="travel-slider__title">4 Guests</div>
-                  </div>
-                  <div class="travel-slider__infoblock">
-                    <div class="travel-slider__suptitle">Pricing</div>
-                    <div class="travel-slider__title">$349 USD</div>
-                    <div class="travel-slider__suptitle-round-trip">
-                      Per Night
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box-travel">
-                  <p class="btn-box__title">
-                    Book <span class="btn-box__title-span">Flight</span>
-                  </p>
-                </div>
-              </div>
+              <a class="btn-box__title">
+                Book<span class="btn-box__title-span">Stay</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="shop" id="shop">
-        <div class="section__wrapper">
-          <div class="title">
-            shop
-            <p class="title__suptitle">shop</p>
-          </div>
-          <div class="shop-slider">
-            <div class="shop-slider__container">
-              <div class="shop-wrapper-style">
-                <div class="shop-slider-title suptitle">
-                  <div class="travel-suptitle__right">Style</div>
-                  <div class="title__left">North Nugget TT Surfboard</div>
-                </div>
-                <div class="surfboard-prise">
-                  <div class="surfboard-prise__rating">
-                    <img
-                      src="images/sleep/star.png"
-                      alt=""
-                      class="surfboard-prise__rating-star"
-                      alt=""
-                    />
-                    <img
-                      src="images/sleep/star.png"
-                      alt=""
-                      class="surfboard-prise__rating-star"
-                      alt=""
-                    />
-                    <img
-                      src="images/sleep/star.png"
-                      alt=""
-                      class="surfboard-prise__rating-star"
-                      alt=""
-                    />
-                    <img
-                      src="images/sleep/star.png"
-                      alt=""
-                      class="surfboard-prise__rating-star"
-                      alt=""
-                    />
-                    <img
-                      src="images/sleep/star.png"
-                      alt=""
-                      class="surfboard-prise__rating-star"
-                      alt=""
-                    />
-                  </div>
-                  <div class="surfboard-prise__dolar">
-                    $799<span class="surfboard-prise__cents">99</span>
-                  </div>
-                </div>
-                <div class="btn-box-travel shop-btn">
-                  <p class="btn-box__title">
-                    Drop <span class="btn-box__title-span">in</span>
-                  </p>
+        <div class="section-wrapper">
+          <p class="section-title section-title__shop">shop</p>
+
+          <div class="shop__container">
+            <img src="images/shop/shop-bg.png" alt="" class="shop__img-bg" />
+
+            <div class="shop__infoblock-wrapper">
+              <div class="slider__title-wrapper">
+                <div class="slider__subtitle subtitle">Style</div>
+                <div class="shop__title">
+                  North Nugget TT<br />
+                  Surfboard
                 </div>
               </div>
 
-              crutch2
-              <div class="shop-wrapper-image" id="shop-wrapper-image">
-                <img
-                  src="images/shop/surfboard.png"
-                  alt=""
-                  class="shop-wrapper-image__images"
-                  alt=""
-                />
+              <p class="shop__price">
+                $799 <sup class="shop__price-cent">99</sup>
+              </p>
 
-                <div
-                  class="shop-dots1 shop-wrapper-image__dots-details"
-                  id="burger-dots"
-                >
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                </div>
-                <p class="shop-wrapper-image__info shop-info1" id="shop-info">
+              <a class="btn-box__title shop__btn">
+                Drop<span class="btn-box__title-span">in</span>
+              </a>
+            </div>
+
+            <div class="shop__wrapper-image-product">
+              <img
+                src="images/shop/surfboard.png"
+                alt=""
+                class="shop__image-product"
+                alt="surfboard"
+              />
+              <div class="shop__dots-wrapper">
+                <span class="shop-dots1 shop__dots"> </span>
+                <p class="shop__dots-argument shop-argument1">
                   111Double Concave with Vee Shape low point
                 </p>
-
-                <div
-                  class="shop-dots2 shop-wrapper-image__dots-details"
-                  id="burger-dots"
-                >
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                </div>
-                <p class="shop-wrapper-image__info shop-info2" id="shop-info">
-                  222Double Concave with Vee Shape low point
-                </p>
-
-                <div
-                  class="shop-dots3 shop-wrapper-image__dots-details"
-                  id="burger-dots"
-                >
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                  <span class="bar-shop"></span>
-                </div>
-
-                <p class="shop-wrapper-image__info shop-info3" id="shop-info">
-                  333Double Concave with Vee Shape low point
+              </div>
+              <div class="shop__dots-wrapper">
+                <span class="shop-dots2 shop__dots"> </span>
+                <p class="shop__dots-argument shop-argument2">
+                  22Double Concave with Vee Shape low point
                 </p>
               </div>
+              <div class="shop__dots-wrapper">
+                <span class="shop-dots3 shop__dots"> </span>
+                <p
+                  class="shop__dots-argument shop__dots-argument-right shop-argument3"
+                >
+                  33Double Concave with Vee Shape low point
+                </p>
+              </div>
+            </div>
 
-              <div class="shop-wrapper-extras">
-                <p class="shop-wrapper-extras__title">Extras</p>
+            <div class="shop__extras">
+              <p class="shop__extras-title">Extras</p>
 
-                <div class="shop-wrapper-extras__container-card">
-                  <div class="shop-wrapper-extras__card-extras">
-                    <img
-                      src="images/shop/wax.png"
-                      alt=""
-                      class="shop-wrapper-extras__img-extras"
-                    />
-                    <p class="shop-wrapper-extras__name-card">Sex Wax</p>
-                    <p class="shop-wrapper-extras__prise-card">$24.99</p>
-                  </div>
-                  <div class="shop-wrapper-extras__card-extras">
-                    <img
-                      src="images/shop/bracelet.png"
-                      alt=""
-                      class="shop-wrapper-extras__img-extras"
-                    />
-                    <p class="shop-wrapper-extras__name-card">Pura Vida</p>
-                    <p class="shop-wrapper-extras__prise-card">$27.99</p>
-                  </div>
+              <div class="shop__extras-container-card">
+                <div class="shop__extras-card-extras">
+                  <img
+                    src="images/shop/wax.png"
+                    alt=""
+                    class="shop__extras-img-extras"
+                  />
+                  <p class="shop__extras-name-card">Sex Wax</p>
+                  <p class="shop__extras-prise-card">$24.99</p>
+                </div>
+                <div class="shop__extras-card-extras">
+                  <img
+                    src="images/shop/bracelet.png"
+                    alt=""
+                    class="shop__extras-img-extras"
+                  />
+                  <p class="shop__extras-name-card">Pura Vida</p>
+                  <p class="shop__extras-prise-card">$27.99</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
     <footer class="footer">
       <div class="logo-footer">
-        <p class="logo-footer__title">
+        <a class="logo-footer__title" href="#header">
           Go <span class="logo-footer__title-span">surf</span>
-        </p>
+        </a>
       </div>
-      <span class="footer__suptitle">© Go-Surf 2022. All Rights Reserved.</span>
+      <span class="footer__subtitle">© Go-Surf 2022. All Rights Reserved.</span>
     </footer>
-    -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"
-      integrity="sha512-mDFhdB9XVuD54kvKFiWsJZM4aCnLeV6tX4bGswCtMIqfzP4C9XHuGruVQWfWcsFtFe9p42rNQZoqIVSWbAEolg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>

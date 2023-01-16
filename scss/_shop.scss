@@ -1,0 +1,265 @@
+.shop {
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__infoblock-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+  }
+  &__img-bg {
+    max-width: 1116px;
+    min-width: 240px;
+    width: 100%;
+    max-height: 780px;
+    min-height: 168px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  &__title {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 3%;
+  }
+  &__price {
+    position: relative;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 125%;
+    text-transform: uppercase;
+    &::before {
+      position: absolute;
+      content: '★★★★★';
+      font-size: 80%;
+      left: 0;
+      bottom: 100%;
+      color: #4af6cd;
+      letter-spacing: 8px;
+      text-shadow: 0px 0px 16px rgb(74 246 205 / 54%);
+    }
+  }
+  &__price-cent {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 222%;
+    text-transform: uppercase;
+  }
+  &__btn {
+    margin: 15% 0;
+  }
+  &__wrapper-image-product {
+    display: flex;
+    position: relative;
+    max-width: 228px;
+    position: relative;
+    margin: 0 152px;
+  }
+  &__image-product {
+    width: 100%;
+    max-width: 228px;
+    min-width: 100px;
+
+    height: auto;
+    max-height: 695px;
+    min-height: 320px;
+    object-fit: cover;
+  }
+  &__dots-wrapper {
+  }
+  &__dots {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    z-index: 3;
+    transform: translateY(-50%);
+    &::before {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 2px;
+      background-color: #4af6cd;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 2px;
+      background-color: #4af6cd;
+      transition: 0.2s;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__dots-argument {
+    position: absolute;
+    display: none;
+    right: -100%;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 24px;
+    /* or 100% */
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+    width: 255px;
+
+    max-width: 345px;
+    width: max-content;
+    height: fit-content;
+    padding-right: 90px;
+    transition: 0.2s;
+    transform: translateY(-50%);
+    &::before {
+      content: '';
+      position: absolute;
+      background: #ffffff;
+      opacity: 0.5;
+      width: 80px;
+      height: 1px;
+      top: 50%;
+      right: 0;
+    }
+  }
+  &__dots-argument-right {
+    padding-right: 0;
+    padding-left: 90px;
+    &::before {
+      right: auto;
+      left: 0;
+    }
+  }
+  //extras
+  &__extras {
+    margin-top: auto;
+  }
+
+  &__extras-title {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 143%;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    padding-left: 15px;
+  }
+
+  &__extras-container-card {
+    display: flex;
+    gap: 65px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &__extras-card-extras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 160px;
+    height: 210px;
+  }
+
+  &__extras-img-extras {
+    width: 103px;
+    height: 104px;
+    margin-bottom: 21px;
+  }
+
+  &__extras-name-card {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  &__extras-prise-card {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 222%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.shop__dots-wrapper.active > .shop__dots::after {
+  transform: rotate(0);
+}
+.shop__dots-wrapper.active > .shop__dots-argument {
+  display: flex;
+}
+.shop__dots-wrapper.active > .shop__dots-argument-right {
+  display: flex;
+}
+
+.shop-dots1 {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+}
+.shop-dots2 {
+  position: absolute;
+  top: 80%;
+  left: 11%;
+}
+
+.shop-dots3 {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+}
+
+.shop-argument1 {
+  position: absolute;
+  top: 45%;
+  right: 110%;
+}
+
+.shop-argument2 {
+  position: absolute;
+  top: 80%;
+  right: 100%;
+}
+
+.shop-argument3 {
+  position: absolute;
+  top: 20%;
+  left: 100%;
+}

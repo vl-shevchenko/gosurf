@@ -1,0 +1,5 @@
+.total-price {
+  &::after {
+    content: 'Per Night';
+  }
+}

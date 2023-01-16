@@ -111,29 +111,6 @@
     bottom: 20%;
     right: 5%;
   }
-
-  &__subtext {
-    position: relative;
-    font-size: 22px;
-    line-height: 145%;
-    letter-spacing: 7.33333px;
-    text-transform: uppercase;
-    mix-blend-mode: normal;
-    opacity: 0.5;
-    width: fit-content;
-    padding-left: 110px;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 0;
-      width: 80px;
-      height: 2px;
-      background: #ffffff;
-      opacity: 0.5;
-    }
-  }
   &__title {
     font-weight: 800;
     font-size: 80px;
@@ -141,12 +118,6 @@
     text-transform: uppercase;
     margin-bottom: 40px;
     text-align: right;
-  }
-  &__text {
-    font-weight: 800;
-    font-size: 40px;
-    line-height: 215%;
-    text-transform: uppercase;
   }
 }
 .container-wrapper {
@@ -277,7 +248,7 @@
   top: 0;
   border-right: solid 1px rgba(255, 255, 255, 0.25);
   height: 100vh;
-  z-index: 1;
+  z-index: 50;
   display: flex;
   gap: 3%;
   flex-direction: column;

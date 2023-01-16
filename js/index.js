@@ -1,52 +1,5 @@
-// slick slider
-$(document).ready(function () {
-  $('.header__slider').slick({
-    infinite: true,
-    speed: 500,
-    fade: true,
-    prevArrow:
-      '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
-    nextArrow:
-      '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
-    asNavFor: '.slider-dots',
-  });
-
-  $('.slider-dots').slick({
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    asNavFor: '.header__slider',
-    rows: 1,
-    variableWidth: true,
-  });
-
-  $('.surf-slider').slick({
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    rows: 0,
-    prevArrow:
-      '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
-    nextArrow:
-      '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
-    // centerMode: true,
-    // variableWidth: true, //дозволяє робити задану ширину слайду
-  });
-  $('.travel-slider').slick({
-    infinite: true,
-    speed: 500,
-    fade: true,
-    prevArrow:
-      '<img class="arrow-slider arrow-prev" src="images/arrow-right.svg" alt="" />',
-    nextArrow:
-      '<img class="arrow-slider arrow-next" src="images/arrow-right.svg" alt="" />',
-  });
-});
-
 //swiper
 var swiper = new Swiper('.mySwiper', {
-  // loop: true,
   spaceBetween: 4,
   slidesPerView: 4,
   freeMode: true,
@@ -77,6 +30,121 @@ function burgerHandler(e) {
   popup.classList.toggle('open');
   burger.classList.toggle('active');
   burger.parentElement.classList.toggle('active');
+}
+popup.addEventListener('click', burgerClose);
+function burgerClose(e) {
+  if (e.target.closest('.nav-bar__item')) {
+    popup.classList.remove('open');
+    burger.classList.remove('active');
+    burger.parentElement.classList.remove('active');
+  }
+}
+
+//dots beach info
+const worldMap = document.querySelector('.world-map-wrapper');
+const dotsBeach = document.querySelectorAll('span.dots-beach');
+
+worldMap.addEventListener('click', changeDotsForm);
+// for (let i = 0; i < dotsBeach.length; i++) {
+//   dotsBeach[i].addEventListener('click', changeDotsForm);
+// }
+function changeDotsForm(e) {
+  let dotsCurrent = e.target;
+
+  for (let i = 0; i < dotsBeach.length; i++) {
+    if (dotsBeach[i].classList.contains('active')) {
+      if (dotsBeach[i].firstChild) {
+        dotsBeach[i].innerHTML = '';
+      }
+      dotsBeach[i].classList.remove('active');
+    } else if (e.target.closest('span')) {
+      dotsCurrent.classList.add('active');
+      dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
+
+      document.getElementById('dots-beach-wrapper').innerHTML = `
+            <div class="dots-beach-info__wrapper">
+              <a class="dots-beach-info__location-name" href="#">Airlie Beach</a>
+              <p class="dots-beach-info__location-city">Australia</p>
+              <div class="dots-beach-info__weather">
+                <p class="dots-beach-info__weather-wave">9 - 13</p>
+                <p class="dots-beach-info__weather-water">+2.3</p>
+                <p class="dots-beach-info__weather-wind">4 SE</p>
+              </div>
+            </div>
+      `;
+    }
+  }
+}
+// function changeDotsForm(e) {
+//   let dotsCurrent = e.target;
+
+//   for (let i = 0; i < dotsBeach.length; i++) {
+//     if (dotsBeach[i].classList.contains('active')) {
+//       if (dotsBeach[i].firstChild) {
+//         dotsBeach[i].innerHTML = '';
+//       }
+//       dotsBeach[i].classList.remove('active');
+//     } else if (e.target.closest('span')) {
+//       dotsCurrent.classList.add('active');
+//       dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
+
+//       document.getElementById('dots-beach-wrapper').innerHTML = `
+//             <div class="dots-beach-info__wrapper">
+//               <a class="dots-beach-info__location-name" href="#">Airlie Beach</a>
+//               <p class="dots-beach-info__location-city">Australia</p>
+//               <div class="dots-beach-info__weather">
+//                 <p class="dots-beach-info__weather-wave">9 - 13</p>
+//                 <p class="dots-beach-info__weather-water">+2.3</p>
+//                 <p class="dots-beach-info__weather-wind">4 SE</p>
+//               </div>
+//             </div>
+//       `;
+//     }
+//   }
+// }
+
+var swiperSurf = new Swiper('.mySwiper-surf', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  // freeMode: true,
+  navigation: {
+    nextEl: '.swiper-arrow-next',
+    prevEl: '.swiper-arrow-prev',
+  },
+  breakpoints: {
+    280: {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+    },
+    555: {
+      slidesPerView: 1.6,
+      spaceBetween: 10,
+    },
+    820: {
+      slidesPerView: 2.3,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 3.3,
+      spaceBetween: 10,
+    },
+    1260: {
+      slidesPerView: 4.3,
+      spaceBetween: 10,
+    },
+  },
+});
+
+const shopDots = document.querySelectorAll('span.shop__dots');
+const shopDotsArgument = document.querySelectorAll('p.shop__dots-argument');
+
+for (let i = 0; i < shopDots.length; i++) {
+  shopDots[i].addEventListener('click', showDotsArgument);
+}
+
+function showDotsArgument(e) {
+  e.target.parentElement.classList.toggle('active');
 }
 
 //weather
@@ -117,87 +185,3 @@ function burgerHandler(e) {
 //   .catch((err) => console.error(err));
 
 //===================================================================================
-
-const worldMap = document.querySelector('.world-map-wrapper');
-let dotsBeach = document.querySelectorAll('span.dots-beach');
-
-let dotsMalibu = document.getElementById('dots-malibu');
-let dotsAirlie = document.getElementById('dots-airlie');
-let dotsCloud = document.getElementById('dots-cloud');
-let dotsVieux = document.getElementById('dots-vieux');
-let dots1 = document.getElementById('dots-1');
-let dots2 = document.getElementById('dots-2');
-let dots3 = document.getElementById('dots-3');
-let dots4 = document.getElementById('dots-4');
-
-let shopWrapperImage = document.getElementById('shop-wrapper-image');
-let burgerDots = document.querySelectorAll(
-  'div.shop-wrapper-image__dots-details'
-);
-let shopInfo = document.querySelector('shop-info');
-// for (let i = 0; i < burgerDots.length; i++) {
-//   burgerDots[i].addEventListener('click', shopDetails);
-// }
-
-//crutch2
-shopWrapperImage.addEventListener('click', shopDetails);
-
-function shopDetails(e) {
-  let dotsCurrent = e.target;
-  if (e.target.closest('div.shop-wrapper-image__dots-details')) {
-    for (let i = 0; i < burgerDots.length; i++) {
-      dotsCurrent.classList.toggle('active');
-      dotsCurrent.classList.toggle('open');
-    }
-  }
-}
-
-for (let i = 0; i < dotsBeach.length; i++) {
-  console.log(dotsBeach[i].classList);
-}
-
-worldMap.addEventListener('click', changeDotsForm);
-// for (let i = 0; i < dotsBeach.length; i++) {
-//   dotsBeach[i].addEventListener('click', changeDotsForm);
-// }
-function changeDotsForm(e) {
-  let dotsCurrent = e.target;
-  // let dotsBeachWrapper = document.getElementById('dots-beach-wrapper');
-
-  // if (e.target.matches('span')) {
-  //   dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
-  //   // let dotsBeachWrapper = document.getElementById('dots-beach-wrapper');
-  //   // dotsCurrent.appendChild(dotsBeachWrapper);
-  // }
-  //потрібно зробити так, щоб div b spam був тільки один. попередні створені потрібно видаляти
-  // for (let i = 0; i < dotsBeach.length; i++) {
-  //   if (document.getElementById('dots-beach-wrapper') > 1) {
-  //     dotsBeach[i].innerHTML = '';
-  //   }
-  // }
-  // document.getElementById('dots-beach-wrapper').innerHTML = '';
-
-  for (let i = 0; i < dotsBeach.length; i++) {
-    if (dotsBeach[i].classList.contains('active')) {
-      if (dotsBeach[i].firstChild) {
-        dotsBeach[i].innerHTML = '';
-      }
-      dotsBeach[i].classList.remove('active');
-    } else if (e.target.closest('span')) {
-      dotsCurrent.classList.add('active');
-      dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
-
-      document.getElementById('dots-beach-wrapper').innerHTML = `
-            <div class="dots-beach-info__wrapper">
-              <a class="dots-beach-info__location-name" href="#">Airlie Beach</a>
-              <p class="dots-beach-info__location-city">Australia</p>
-              <div class="dots-beach-info__weather">
-                <p class="dots-beach-info__weather-wave">9 - 13</p>
-                <p class="dots-beach-info__weather-water">+2.3</p>
-                <p class="dots-beach-info__weather-wind">4 SE</p>
-              </div>
-            </div>
-      `;
-    }
-  }
-}

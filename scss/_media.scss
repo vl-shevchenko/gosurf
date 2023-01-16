@@ -1,3 +1,23 @@
+//1335
+@media (max-width: 1335px) {
+  .shop-dots3 {
+    left: 12%;
+  }
+  .shop-argument3 {
+    right: 100%;
+    left: auto;
+  }
+  .shop__dots-argument {
+    padding-right: 50px;
+    padding-left: 0;
+    max-width: 280px;
+  }
+  .shop__dots-argument::before {
+    right: 0;
+    left: auto;
+    width: 40px;
+  }
+}
 //1280
 @media (max-width: 1280px) {
   .swiper-dots-container {
@@ -38,6 +58,11 @@
       margin-right: 5px;
     }
   }
+  .shop__dots-argument {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+  }
 }
 
 //1024x600
@@ -54,6 +79,29 @@
   }
   .subtitle::before {
     width: 40px;
+  }
+  .slider__subtitle {
+    //  position: relative;
+    //  font-size: 22px;
+    //  line-height: 145%;
+    //  letter-spacing: 7.33333px;
+    //  text-transform: uppercase;
+    //  mix-blend-mode: normal;
+    //  opacity: 0.5;
+    //  width: fit-content;
+    padding-right: 55px;
+    padding-left: 0;
+  }
+  .slider__subtitle::before {
+    // position: absolute;
+    // content: '';
+    // top: 50%;
+    right: 0;
+    left: auto;
+    // width: 80px;
+    // height: 2px;
+    // background: #ffffff;
+    // opacity: 0.5;
   }
   .subtitle-header {
     font-size: 20px;
@@ -174,20 +222,57 @@
     font-size: 50px;
   }
   .section-title::before {
-    width: 30px;
+    width: 50px;
   }
   .section-title::after {
     font-weight: 800;
     font-size: 100px;
     line-height: 78%;
-    bottom: -43px;
-    left: -118px;
   }
 
   .header__map-svg {
     width: 60%;
     height: 35%;
     max-height: 340px;
+  }
+  .slider__title-wrapper {
+    margin-bottom: 70px;
+  }
+  .slider__title {
+    padding-right: 120%;
+  }
+  .slider__title-travel {
+    padding-right: 70px;
+  }
+  .slider__block-wrapper {
+    gap: 35px;
+  }
+  .slider__infoblock {
+    height: 120px;
+    width: 155px;
+    gap: 10px;
+  }
+  .slider__infoblock-title {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .slider__infoblock-subtitle {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 4px;
+  }
+  .slider__result:after {
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+  .shop__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .shop__wrapper-image-product {
+    max-width: 200px;
+    margin: 0 5% 0 60%;
   }
 }
 
@@ -223,6 +308,14 @@
     width: 15px;
     height: 15px;
   }
+  .shop__dots-argument {
+    font-size: 14px;
+    padding-right: 30px;
+    max-width: 183px;
+  }
+  .shop__dots-argument::before {
+    width: 20px;
+  }
 }
 
 //mibile
@@ -234,6 +327,21 @@
   .header__map-svg {
     width: 90%;
     height: 35%;
+  }
+  .slider__title {
+    padding-right: 0;
+  }
+  .slider__title-travel {
+    padding-right: 70px;
+  }
+
+  .slider__title::after {
+    right: 0;
+    left: 0;
+    bottom: -80%;
+  }
+  .slider__title-travel::after {
+    left: auto;
   }
 }
 

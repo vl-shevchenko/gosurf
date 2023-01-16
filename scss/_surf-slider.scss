@@ -1,0 +1,94 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-box {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  overflow: hidden;
+  max-width: 390px;
+  width: 100%;
+  min-height: 750px;
+  background: #1c2121cd;
+  transition: all 2s;
+  &:hover {
+    background: #1c212110;
+    .slider-box__btn {
+      display: flex;
+    }
+  }
+  &__inner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  &__beach-name {
+    position: absolute;
+    height: 72px;
+    left: 10%;
+    right: 54.1%;
+    top: 12%;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  &__location {
+    position: absolute;
+    left: 10%;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    bottom: 12%;
+    white-space: nowrap;
+  }
+
+  &__location-span {
+    font-weight: 250;
+  }
+  &__btn {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
