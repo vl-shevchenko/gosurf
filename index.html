@@ -298,10 +298,12 @@
       <section class="surf" id="surf">
         <div class="section-wrapper">
           <p class="section-title section-title__surf">surf</p>
-          <div class="title-wrapper">
+          <div class="title-wrapper title-wrapper-surf">
             <div class="subtitle">Current location</div>
-            <div class="title">
-              California <span class="title__span">|</span> USA
+            <div class="title" id="surf-title-district">
+              California
+              <span class="title__span">|</span>
+              <span id="surf-title-country">USA</span>
             </div>
           </div>
 
@@ -323,18 +325,33 @@
               src="images/surf/world-map.png"
               alt="world map"
             />
-            <p class="coordinates-beach">34.0501&deg N -118.2446&deg W</p>
-
-            <span class="dots-beach dots-malibu" id="dots-malibu"></span>
-            <span class="dots-beach dots-airlie" id="dots-airlie"></span>
-            <span class="dots-beach dots-cloud" id="dots-cloud"></span>
-            <span class="dots-beach dots-vieux" id="dots-vieux"></span>
-            <span class="dots-beach dots-1" id="dots-1"> </span>
-            <span class="dots-beach dots-2" id="dots-2"></span>
-            <span class="dots-beach dots-3" id="dots-3"></span>
-            <span class="dots-beach dots-4" id="dots-4"></span>
+            <div class="coordinates-containr">
+              <p class="coordinates-beach" id="coordinates-beach-lat">
+                34.0501&deg N
+              </p>
+              <p class="coordinates-beach" id="coordinates-beach-lng">
+                -118.2446&deg W
+              </p>
+            </div>
+            <span class="dots-beach hanalei-beach" id="hanalei-beach"></span>
+            <span class="dots-beach malibu-beach" id="malibu-beach"></span>
+            <span class="dots-beach cocoa-beach" id="cocoa-beach"></span>
+            <span
+              class="dots-beach copacabana-beach"
+              id="copacabana-beach"
+            ></span>
+            <span class="dots-beach vieux-boucau" id="vieux-boucau"></span>
+            <span
+              class="dots-beach jeffreys-bay-beach"
+              id="jeffreys-bay-beach"
+            ></span>
+            <span
+              class="dots-beach hikkaduwa-beach"
+              id="hikkaduwa-beach"
+            ></span>
+            <span class="dots-beach airlie-beach" id="airlie-beach"></span>
             <!--crutch -->
-            <span class="dots-beach dots-5" id="dots-5"></span>
+            <span class="dots-beach dots-5"></span>
           </div>
 
           <div class="swiper mySwiper-surf">
@@ -414,7 +431,7 @@
                 <div class="slider-box">
                   <img
                     class="slider-box__inner-img"
-                    src="images/surf/surf-slider/surfing.png"
+                    src="images/surf/surf-slider/surfing5.png"
                     alt="Beach"
                   />
                   <div class="slider-box__beach-name">Malibu Beach</div>
@@ -432,7 +449,7 @@
                 <div class="slider-box">
                   <img
                     class="slider-box__inner-img"
-                    src="images/surf/surf-slider/surfing4.png"
+                    src="images/surf/surf-slider/surfing6.jpg"
                     alt="Beach"
                   />
                   <div class="slider-box__beach-name">Vieux Boucau</div>
@@ -450,7 +467,7 @@
                 <div class="slider-box">
                   <img
                     class="slider-box__inner-img"
-                    src="images/surf/surf-slider/surfing2.jpeg"
+                    src="images/surf/surf-slider/surfing7.jpg"
                     alt="Beach"
                   />
                   <div class="slider-box__beach-name">Airlie Beach</div>
@@ -468,7 +485,7 @@
                 <div class="slider-box">
                   <img
                     class="slider-box__inner-img"
-                    src="images/surf/surf-slider/surfing3.png"
+                    src="images/surf/surf-slider/surfing8.jpg"
                     alt="Beach"
                   />
                   <div class="slider-box__beach-name">Cloud Nine</div>

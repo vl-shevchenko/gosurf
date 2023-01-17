@@ -16,11 +16,14 @@
   min-height: 100px;
   object-fit: cover;
 }
-
-.coordinates-beach {
+.coordinates-containr {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: calc(50% - 375px / 2);
+  top: calc(50% - 187.5px);
   right: 1%;
+}
+.coordinates-beach {
   transform: rotate(-180deg);
   text-transform: uppercase;
   writing-mode: vertical-rl;
@@ -71,6 +74,7 @@
     position: relative;
     font-size: 16px;
     line-height: 32px;
+    text-transform: capitalize;
     &::after {
       content: '';
       position: absolute;
@@ -231,35 +235,35 @@
   left: 122px;
 }
 
-.dots-malibu {
+.hanalei-beach {
   top: 54%;
   left: 0;
 }
-.dots-airlie {
+.malibu-beach {
   top: 44%;
   left: 11%;
 }
-.dots-cloud {
+.cocoa-beach {
   top: 50%;
   left: 28%;
 }
-.dots-vieux {
+.copacabana-beach {
   top: 79%;
   left: 34%;
 }
-.dots-1 {
+.vieux-boucau {
   top: 33%;
   left: 45%;
 }
-.dots-2 {
+.jeffreys-bay-beach {
   top: 86%;
   left: 53%;
 }
-.dots-3 {
+.hikkaduwa-beach {
   top: 62%;
   left: 68%;
 }
-.dots-4 {
+.airlie-beach {
   top: 73%;
   left: 89%;
   z-index: 1;

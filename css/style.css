@@ -482,6 +482,10 @@ body {
   background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
 
+.title-header {
+  margin-bottom: 5%;
+}
+
 .swiper {
   height: 100%;
   width: 100%;
@@ -757,10 +761,20 @@ body {
      object-fit: cover;
 }
 
-.coordinates-beach {
+.coordinates-containr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: calc(50% - 187.5px);
   right: 1%;
+}
+
+.coordinates-beach {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -815,6 +829,7 @@ body {
   position: relative;
   font-size: 16px;
   line-height: 32px;
+  text-transform: capitalize;
 }
 .dots-beach-mobile-info__location-city::after {
   content: "";
@@ -1027,42 +1042,42 @@ body {
   left: 122px;
 }
 
-.dots-malibu {
+.hanalei-beach {
   top: 54%;
   left: 0;
 }
 
-.dots-airlie {
+.malibu-beach {
   top: 44%;
   left: 11%;
 }
 
-.dots-cloud {
+.cocoa-beach {
   top: 50%;
   left: 28%;
 }
 
-.dots-vieux {
+.copacabana-beach {
   top: 79%;
   left: 34%;
 }
 
-.dots-1 {
+.vieux-boucau {
   top: 33%;
   left: 45%;
 }
 
-.dots-2 {
+.jeffreys-bay-beach {
   top: 86%;
   left: 53%;
 }
 
-.dots-3 {
+.hikkaduwa-beach {
   top: 62%;
   left: 68%;
 }
 
-.dots-4 {
+.airlie-beach {
   top: 73%;
   left: 89%;
   z-index: 1;
@@ -1174,6 +1189,15 @@ body {
   right: 0;
 }
 
+.swiper-slide-active .slider-box {
+  background: rgba(28, 33, 33, 0.062745098);
+}
+.swiper-slide-active .slider-box .slider-box__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .dots-beach-info__wrapper {
   position: relative;
   padding: 24px 32px;
@@ -1216,6 +1240,7 @@ body {
   position: relative;
   font-size: 16px;
   line-height: 32px;
+  text-transform: capitalize;
 }
 .dots-beach-info__location-city::after {
   content: "";
@@ -1471,7 +1496,7 @@ body {
   text-transform: uppercase;
 }
 .shop__btn {
-  margin: 15% 0;
+  margin: 15% auto;
 }
 .shop__wrapper-image-product {
   display: -webkit-box;
@@ -1747,15 +1772,14 @@ body {
 }
 .logo-footer__title {
   font-weight: 800;
-  font-size: 60px;
+  font-size: 40px;
   text-transform: uppercase;
-  line-height: 143%;
 }
 .logo-footer__title-span {
   position: relative;
   background-color: rgba(75, 247, 206, 0.2509803922);
-  padding: 20px 35px;
-  margin-left: 5px;
+  padding: 15px 25px;
+  margin-left: 10px;
 }
 .logo-footer__title-span::before {
   content: "";
@@ -1858,11 +1882,12 @@ body {
     font-size: 40px;
   }
   .title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 150%;
   }
   .title-header {
+    font-size: 30px;
     font-weight: 800;
   }
   .swiper-dots-container {
@@ -1884,8 +1909,8 @@ body {
     -o-transition: 0.3s;
     transition: 0.3s;
     height: calc(100vh - 70px);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     background: rgba(20, 56, 47, 0.2509803922);
     position: fixed;
   }
@@ -1912,8 +1937,8 @@ body {
     -o-transition: 0.3s;
     transition: 0.3s;
     position: fixed;
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
   .container__burger.active {
     padding-left: 51%;
@@ -2016,12 +2041,12 @@ body {
   }
   .slider__infoblock {
     height: 120px;
-    width: 155px;
+    width: 150px;
     gap: 10px;
   }
   .slider__infoblock-title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
   }
   .slider__infoblock-subtitle {
     font-size: 12px;
@@ -2030,20 +2055,35 @@ body {
   }
   .slider__result:after {
     font-weight: 200;
-    font-size: 12px;
-    letter-spacing: 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+  .btn-box__title {
+    font-size: 25px;
+    height: 60px;
   }
   .shop__title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
   }
   .shop__wrapper-image-product {
     max-width: 200px;
     margin: 0 5% 0 60%;
   }
+  .double-down-arrows {
+    display: none;
+  }
+  .shop__wrapper-image-product {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .shop__img-bg {
+    top: 10%;
+  }
 }
 @media (max-width: 853px) {
-  .coordinates-beach {
+  .coordinates-containr {
     display: none;
   }
   .dots-beach-mobile-info__wrapper {
@@ -2061,17 +2101,21 @@ body {
   .dots-beach-wrapper {
     display: none;
   }
+  .section-wrapper {
+    margin: 80px auto;
+  }
 }
 @media (max-width: 759px) {
   .swiper-dots-container {
     display: none;
   }
 }
-@media (max-width: 640px) {
-  .dots-beach {
-    width: 15px;
-    height: 15px;
+@media (max-width: 690px) {
+  .shop__infoblock-wrapper {
+    width: 100%;
   }
+}
+@media (max-width: 640px) {
   .shop__dots-argument {
     font-size: 14px;
     padding-right: 30px;
@@ -2112,5 +2156,23 @@ body {
 @media (max-width: 375px) {
   .header__map-svg {
     display: none;
+  }
+}
+@media (max-width: 320px) {
+  .shop__dots-argument {
+    padding-right: 20px;
+    max-width: 155px;
+  }
+  .shop__dots-argument::before {
+    width: 15px;
+  }
+  .shop-argument1 {
+    right: 102%;
+  }
+  .shop-argument2 {
+    right: 95%;
+  }
+  .shop-argument3 {
+    right: 95%;
   }
 }

@@ -92,3 +92,10 @@
     right: 0;
   }
 }
+
+.swiper-slide-active .slider-box {
+  background: #1c212110;
+  .slider-box__btn {
+    display: flex;
+  }
+}
