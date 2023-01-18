@@ -1198,6 +1198,30 @@ body {
   display: flex;
 }
 
+.surf-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.title-surf-district {
+  position: relative;
+  padding-right: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.title-surf-district::after {
+  position: absolute;
+  content: "|";
+  font-weight: 100;
+  font-size: inherit;
+  margin-left: 7px;
+}
+
 .dots-beach-info__wrapper {
   position: relative;
   padding: 24px 32px;
@@ -1768,6 +1792,12 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin: 0 auto;
 }
 .logo-footer__title {
@@ -1882,9 +1912,13 @@ body {
     font-size: 40px;
   }
   .title {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 150%;
+  }
+  .title-surf-district::after {
+    font-size: 24px;
+    margin-left: 10px;
   }
   .title-header {
     font-size: 30px;
@@ -2156,6 +2190,12 @@ body {
 @media (max-width: 375px) {
   .header__map-svg {
     display: none;
+  }
+  .title-surf-district {
+    font-size: 17px;
+  }
+  .title-surf-country {
+    font-size: 17px;
   }
 }
 @media (max-width: 320px) {

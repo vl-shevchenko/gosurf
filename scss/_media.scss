@@ -110,9 +110,13 @@
     font-size: 40px;
   }
   .title {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 150%;
+  }
+  .title-surf-district::after {
+    font-size: 24px;
+    margin-left: 10px;
   }
   .title-header {
     font-size: 30px;
@@ -375,6 +379,12 @@
 @media (max-width: 375px) {
   .header__map-svg {
     display: none;
+  }
+  .title-surf-district {
+    font-size: 17px;
+  }
+  .title-surf-country {
+    font-size: 17px;
   }
 }
 

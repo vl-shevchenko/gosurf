@@ -34,6 +34,23 @@
 // }
 // }
 
+.surf-title-container {
+  display: flex;
+  width: fit-content;
+}
+.title-surf-district {
+  position: relative;
+  padding-right: 30px;
+  width: fit-content;
+  &::after {
+    position: absolute;
+    content: '|';
+    font-weight: 100;
+    font-size: inherit;
+    margin-left: 7px;
+  }
+}
+
 .dots-beach-info {
   &__wrapper {
     position: relative;

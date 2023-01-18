@@ -20,7 +20,10 @@
 }
 .logo-footer {
   display: flex;
+  // width: max-content;
   width: fit-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin: 0 auto;
   &__title {
     font-weight: 800;
