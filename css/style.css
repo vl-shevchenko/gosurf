@@ -772,6 +772,7 @@ body {
   position: absolute;
   top: calc(50% - 187.5px);
   right: 1%;
+  gap: 20px;
 }
 
 .coordinates-beach {
@@ -1789,9 +1790,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1799,6 +1797,14 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 217px;
+  height: 78px;
 }
 .logo-footer__title {
   font-weight: 800;

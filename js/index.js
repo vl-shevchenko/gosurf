@@ -79,7 +79,7 @@ const beaches = [
   {
     pos: 8,
     country: 'australia',
-    district: 'queensland ',
+    district: 'queensland',
     beach: 'airlie beach',
     id: 'airlie-beach',
     coordinates: {
@@ -88,18 +88,6 @@ const beaches = [
     },
   },
 ];
-// const dotsBeach = document.querySelectorAll('span.dots-beach');
-// for (let i = 0; i < beaches.length; i++) {
-//   dotsBeach[i].addEventListener('click', beachName);
-// }
-// function beachName(e) {
-//   for (let i = 0; i < beaches.length; i++) {
-//     if (beaches[i].id == e.target.id) {
-//       let beach = beaches[i].beach;
-//       console.log(beach);
-//     }
-//   }
-// }
 
 //swiper header
 var swiper = new Swiper('.mySwiper', {
@@ -179,7 +167,20 @@ function burgerClose(e) {
 //dots beach info
 const worldMap = document.querySelector('.world-map-wrapper');
 const dotsBeach = document.querySelectorAll('span.dots-beach');
-const test = document.querySelector('.test');
+
+const dotsBeachMobileInfoWeather = document.querySelector(
+  '.dots-beach-mobile-info__weather'
+);
+const dotsBeachMobileInfoWeatherWave = document.querySelector(
+  '.dots-beach-mobile-info__weather-wave'
+);
+const dotsBeachMobileInfoWeatherWater = document.querySelector(
+  '.dots-beach-mobile-info__weather-water'
+);
+const dotsBeachMobileInfoWeatherWind = document.querySelector(
+  '.dots-beach-mobile-info__weather-wind'
+);
+
 // worldMap.addEventListener('click', changeDotsForm);
 for (let i = 0; i < dotsBeach.length; i++) {
   dotsBeach[i].addEventListener('click', getInfoBeach);
@@ -187,18 +188,28 @@ for (let i = 0; i < dotsBeach.length; i++) {
 function getInfoBeach(e) {
   let dotsCurrent = e.target;
 
+  // e.target.classList.remove('active'); //remove 'active' при повторному кліку на ту ж саму точку
+  // e.target.innerHTML = '';
+  // console.log('remove active classList first');
   //check classlist 'active'
   for (let i = 0; i < dotsBeach.length; i++) {
     if (dotsBeach[i].classList.contains('active')) {
       if (dotsBeach[i].firstChild) {
         dotsBeach[i].innerHTML = '';
+        console.log('have firstChild and inner ""');
       }
       dotsBeach[i].classList.remove('active');
-      console.log('remove active classList');
+      console.log('removed the previous classList "active"');
     }
   }
-
+  // if (e.target.classList.contains('active')) {
+  //   e.target.classList.remove('active');
+  //   e.target.innerHTML = '';
+  //   console.log('remove classList active too');
+  // } else {
   e.target.classList.add('active');
+  console.log('add classList "active"');
+  // }
 
   //combining a dotsBeach with an beaches
   for (let i = 0; i < beaches.length; i++) {
@@ -209,12 +220,28 @@ function getInfoBeach(e) {
       let lat = beaches[i].coordinates.lat;
       let lng = beaches[i].coordinates.lng;
       console.log(beach);
-
+      dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
+      document.getElementById('dots-beach-wrapper').innerHTML = `
+      <div class="dots-beach-info__wrapper">
+        <a class="dots-beach-info__location-name" href="#">${beach}</a>
+        <p class="dots-beach-info__location-city">${district}</p>
+        <div class="dots-beach-info__weather">
+          <p class="dots-beach-info__weather-wave"></p>
+          <p class="dots-beach-info__weather-water"></p>
+          <p class="dots-beach-info__weather-wind"></p>
+        </div>
+      </div>
+`;
+      const dotsBeachInfoWeatherWave = document.querySelector(
+        '.dots-beach-info__weather-wave'
+      );
+      const dotsBeachInfoWeatherWater = document.querySelector(
+        '.dots-beach-info__weather-water'
+      );
+      const dotsBeachInfoWeatherWind = document.querySelector(
+        '.dots-beach-info__weather-wind'
+      );
       //weather api
-      const state = {
-        hours: [],
-      };
-
       const params = 'waveHeight,waterTemperature,windSpeed';
       const options = {
         method: 'GET',
@@ -225,15 +252,44 @@ function getInfoBeach(e) {
         },
       };
 
-      fetch(
-        `https://stormglass.p.rapidapi.com/forecast?lat=${lat}&lng=${lng}&params=${params}`,
-        options
-      )
-        .then((response) => response.json())
-        .then((response) => console.log(response));
-      //   ${response.hours[203].waveHeight[0].value}
-      //   ${response.hours[203].waterTemperature[0].value}
-      //   ${response.hours[203].windSpeed[0].value}
+      let store = {
+        hours: [],
+      };
+      const fetchData = async () => {
+        const result = await fetch(
+          `https://stormglass.p.rapidapi.com/forecast?lat=${lat}&lng=${lng}&params=${params}`,
+          options
+        );
+        const data = await result.json();
+        const {
+          hours: [],
+        } = data;
+        console.log(data);
+
+        store = {
+          ...store,
+          hours: data.hours,
+        };
+        console.log(store);
+
+        dotsBeachInfoWeatherWave.innerHTML = `${store.hours[203].waveHeight[0].value}`;
+        dotsBeachInfoWeatherWater.innerHTML = `${store.hours[203].waterTemperature[0].value}`;
+        dotsBeachInfoWeatherWind.innerHTML = `${store.hours[203].windSpeed[0].value} SE`;
+
+        dotsBeachMobileInfoWeatherWave.innerHTML = `${store.hours[203].waveHeight[0].value}`;
+        dotsBeachMobileInfoWeatherWater.innerHTML = `${store.hours[203].waterTemperature[0].value}`;
+        dotsBeachMobileInfoWeatherWind.innerHTML = `${store.hours[203].windSpeed[0].value} SE`;
+
+        // dotsBeachMobileInfoWeather.innerHTML = ` <p class="dots-beach-mobile-info__weather-wave">${store.hours[203].waveHeight[0].value}</p>
+        // <p class="dots-beach-mobile-info__weather-water">${store.hours[203].waterTemperature[0].value}</p>
+        // <p class="dots-beach-mobile-info__weather-wind">${store.hours[203].windSpeed[0].value} SE</p>
+        // `;
+      };
+      fetchData();
+
+      //   ${store.hours[203].waveHeight[0].value}
+      //   ${store.hours[203].waterTemperature[0].value}
+      //   ${store.hours[203].windSpeed[0].value}
 
       const surfTitleDistrict = document.getElementById('surf-title-district');
       const surfTitleCountry = document.getElementById('surf-title-country');
@@ -255,109 +311,11 @@ function getInfoBeach(e) {
         'coordinates-beach-lng'
       );
 
-      coordinatesBeachLat.innerHTML = `${lat}&deg N`;
-      coordinatesBeachLng.innerHTML = `${lng}&deg W`;
-      dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
-
-      document.getElementById('dots-beach-wrapper').innerHTML = `
-                      <div class="dots-beach-info__wrapper">
-                        <a class="dots-beach-info__location-name" href="#">${beach}</a>
-                        <p class="dots-beach-info__location-city">${district}</p>
-                        <div class="dots-beach-info__weather">
-                          <p class="dots-beach-info__weather-wave">2-4</p>
-                          <p class="dots-beach-info__weather-water">+2.3</p>
-                          <p class="dots-beach-info__weather-wind">4 SE</p>
-                        </div>
-                      </div>
-                `;
+      coordinatesBeachLat.innerHTML = `${lat}&degN`;
+      coordinatesBeachLng.innerHTML = `${lng}&degW`;
     }
   }
 }
-
-// function changeDotsForm(e) {
-//   let dotsCurrent = e.target;
-
-//   for (let i = 0; i < dotsBeach.length; i++) {
-//     if (dotsBeach[i].classList.contains('active')) {
-//       if (dotsBeach[i].firstChild) {
-//         dotsBeach[i].innerHTML = '';
-//       }
-//       dotsBeach[i].classList.remove('active');
-//     } else if (e.target.closest('span')) {
-//       dotsCurrent.classList.add('active');
-
-//       for (let i = 0; i < beaches.length; i++) {
-//         if (beaches[i].id == e.target.id) {
-//           let country = beaches[i].country;
-//           let district = beaches[i].district;
-//           let beach = beaches[i].beach;
-//           let lat = beaches[i].coordinates.lat;
-//           let lng = beaches[i].coordinates.lng;
-
-//           const params = 'waveHeight,waterTemperature,windSpeed';
-//           const options = {
-//             method: 'GET',
-//             headers: {
-//               'X-RapidAPI-Key':
-//                 '4f03edbfffmsh7a6729e58896fe1p1c6f3fjsn31c9794bdc89',
-//               'X-RapidAPI-Host': 'stormglass.p.rapidapi.com',
-//             },
-//           };
-
-//           fetch(
-//             `https://stormglass.p.rapidapi.com/forecast?lat=${lat}&lng=${lng}&params=${params}`,
-//             options
-//           )
-//             .then((response) => response.json())
-//             .then((response) => console.log(response.hours[203]))
-//             .catch((err) => console.error(err));
-//           //   ${response.hours[203].waveHeight[0].value}
-//           //   ${response.hours[203].waterTemperature[0].value}
-//           //   ${response.hours[203].windSpeed[0].value}
-//           // // const surfTitleDistrict = document.getElementById(
-//           //   'surf-title-district'
-//           // );
-
-//           // const surfTitleCountry =
-//           //   document.getElementById('surf-title-country');
-//           const dotsBeachMobileInfoLocationName = document.querySelector(
-//             '.dots-beach-mobile-info__location-name'
-//           );
-//           const dotsBeachMobileInfoLocationCity = document.querySelector(
-//             '.dots-beach-mobile-info__location-city'
-//           );
-//           // surfTitleDistrict.innerHTML = `${district}`;
-//           // surfTitleCountry.innerHTML = `${country}`;
-//           dotsBeachMobileInfoLocationName.innerHTML = `${beach}`;
-//           dotsBeachMobileInfoLocationCity.innerHTML = `${district}`;
-//           console.log(beach);
-//           const coordinatesBeachLat = document.getElementById(
-//             'coordinates-beach-lat'
-//           );
-//           const coordinatesBeachLng = document.getElementById(
-//             'coordinates-beach-lng'
-//           );
-
-//           coordinatesBeachLat.innerHTML = `${lat}&deg N`;
-//           coordinatesBeachLng.innerHTML = `${lng}&deg W`;
-//           dotsCurrent.innerHTML = `<div class="dots-beach-wrapper" id="dots-beach-wrapper"></div>`;
-
-//           document.getElementById('dots-beach-wrapper').innerHTML = `
-//                 <div class="dots-beach-info__wrapper">
-//                   <a class="dots-beach-info__location-name" href="#">${beach}</a>
-//                   <p class="dots-beach-info__location-city">${district}</p>
-//                   <div class="dots-beach-info__weather">
-//                     <p class="dots-beach-info__weather-wave">9 - 13</p>
-//                     <p class="dots-beach-info__weather-water">+2.3</p>
-//                     <p class="dots-beach-info__weather-wind">4 SE</p>
-//                   </div>
-//                 </div>
-//           `;
-//         }
-//       }
-//     }
-//   }
-// }
 
 const shopDots = document.querySelectorAll('span.shop__dots');
 const shopDotsArgument = document.querySelectorAll('p.shop__dots-argument');
@@ -370,7 +328,28 @@ function showDotsArgument(e) {
   e.target.parentElement.classList.toggle('active');
 }
 
-console.log(beaches[5].coordinates);
+//close all dotsForm
+worldMap.addEventListener('click', closeDotsForm);
+function closeDotsForm(e) {
+  for (let i = 0; i < dotsBeach.length; i++) {
+    if (e.target.matches('span')) {
+      console.log('it is span');
+    } else {
+      dotsBeach[i].classList.remove('active');
+      dotsBeach[i].innerHTML = '';
+      console.log('close all');
+    }
+
+    // if (dotsBeach[i].classList.contains('active')) {
+    //   if (dotsBeach[i].firstChild) {
+    //     dotsBeach[i].innerHTML = '';
+    //   }
+    //   dotsBeach[i].classList.remove('active');
+    // } else if (e.target.closest('span')) {
+    //   dotsCurrent.classList.add('active');
+    // }
+  }
+}
 //weather
 // const lat = 25.793449;
 // const lng = -80.139198;
