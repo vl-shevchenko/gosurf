@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 30px;
   margin: 200px 0 50px 0;
+  align-items: center;
   &__subtitle {
     font-family: 'Fira Sans';
     font-style: normal;
@@ -22,7 +23,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
   width: 217px;

@@ -278,12 +278,19 @@
     color: #fff;
     writing-mode: vertical-rl; //horizontal-tb
     transform: rotate(-180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__title-span {
     position: relative;
     background-color: #4bf7ce40;
     padding: 20px 35px;
     margin-top: 5px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &::before {
       content: '';
       position: absolute;

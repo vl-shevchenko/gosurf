@@ -186,6 +186,7 @@
   }
   &__title {
     position: relative;
+    width: fit-content;
     padding-right: 100%;
     &::after {
       position: absolute;

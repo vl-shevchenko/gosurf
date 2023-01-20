@@ -279,11 +279,6 @@ function getInfoBeach(e) {
         dotsBeachMobileInfoWeatherWave.innerHTML = `${store.hours[203].waveHeight[0].value}`;
         dotsBeachMobileInfoWeatherWater.innerHTML = `${store.hours[203].waterTemperature[0].value}`;
         dotsBeachMobileInfoWeatherWind.innerHTML = `${store.hours[203].windSpeed[0].value} SE`;
-
-        // dotsBeachMobileInfoWeather.innerHTML = ` <p class="dots-beach-mobile-info__weather-wave">${store.hours[203].waveHeight[0].value}</p>
-        // <p class="dots-beach-mobile-info__weather-water">${store.hours[203].waterTemperature[0].value}</p>
-        // <p class="dots-beach-mobile-info__weather-wind">${store.hours[203].windSpeed[0].value} SE</p>
-        // `;
       };
       fetchData();
 
@@ -339,15 +334,6 @@ function closeDotsForm(e) {
       dotsBeach[i].innerHTML = '';
       console.log('close all');
     }
-
-    // if (dotsBeach[i].classList.contains('active')) {
-    //   if (dotsBeach[i].firstChild) {
-    //     dotsBeach[i].innerHTML = '';
-    //   }
-    //   dotsBeach[i].classList.remove('active');
-    // } else if (e.target.closest('span')) {
-    //   dotsCurrent.classList.add('active');
-    // }
   }
 }
 //weather
@@ -390,3 +376,32 @@ function closeDotsForm(e) {
 //   .catch((err) => console.error(err));
 
 //===================================================================================
+
+//calculator for sleep
+
+const sliderCalculatorNight = document.getElementById(
+  'slider-calculator-night'
+);
+const sliderCalculatorGuest = document.getElementById(
+  'slider-calculator-guest'
+);
+const sliderCalculatorBtnMinus = document.querySelector(
+  '.slider-calculator__minus'
+);
+const sliderCalculatorBtnPlus = document.querySelector(
+  '.slider-calculator__plus'
+);
+const sliderNight = document.getElementById('slider-night');
+
+sliderCalculatorNight.addEventListener('click', countNigt);
+
+function countNigt(e) {
+  sliderCalculatorBtnPlus;
+  if (e.target.matches('span.slider-calculator__plus')) {
+    sliderNight.value = parseInt(sliderNight.value) + 1;
+    console.log('plus');
+  } else if (e.target.matches('span.slider-calculator__minus')) {
+    sliderNight.value = parseInt(sliderNight.value) - 1;
+    console.log('minus');
+  }
+}
