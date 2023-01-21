@@ -232,6 +232,7 @@ body {
   -webkit-transform: translateX(-50px);
       -ms-transform: translateX(-50px);
           transform: translateX(-50px);
+  opacity: 0.7;
 }
 .slider__block-wrapper {
   display: -webkit-box;
@@ -326,6 +327,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  text-align: left;
 }
 .slider__result {
   position: relative;
@@ -1450,6 +1452,11 @@ body {
   background-size: cover;
 }
 
+.arrow-wrapper-travel {
+  top: 10%;
+  right: 0;
+}
+
 .total-price-travel::after {
   content: "Round Trip";
 }
@@ -1893,12 +1900,25 @@ body {
   font-weight: 800;
   font-size: 40px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .logo-footer__title-span {
   position: relative;
   background-color: rgba(75, 247, 206, 0.2509803922);
   padding: 15px 25px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .logo-footer__title-span::before {
   content: "";
@@ -2031,7 +2051,7 @@ body {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: rgba(20, 56, 47, 0.2509803922);

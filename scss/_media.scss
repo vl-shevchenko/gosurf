@@ -125,7 +125,7 @@
   .header__asside {
     left: -100%;
     transition: 0.3s;
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: #14382f40;

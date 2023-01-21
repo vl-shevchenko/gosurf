@@ -145,6 +145,20 @@ var swiperSurf = new Swiper('.mySwiper-surf', {
   },
 });
 
+//swiper travel
+var swiperTravel = new Swiper('.mySwiper-travel', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  loop: true,
+  spaceBetween: 4,
+  navigation: {
+    nextEl: '.swiper-arrow-next',
+    prevEl: '.swiper-arrow-prev',
+  },
+});
+
 //mobile menu
 const burger = document.querySelector('#burger');
 const popup = document.querySelector('#popup');
