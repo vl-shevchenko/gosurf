@@ -159,6 +159,20 @@ var swiperTravel = new Swiper('.mySwiper-travel', {
   },
 });
 
+//swiper sleep
+var swiperSleep = new Swiper('.mySwiper-sleep', {
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  loop: true,
+  spaceBetween: 4,
+  navigation: {
+    nextEl: '.swiper-arrow-next',
+    prevEl: '.swiper-arrow-prev',
+  },
+});
+
 //mobile menu
 const burger = document.querySelector('#burger');
 const popup = document.querySelector('#popup');
@@ -181,19 +195,10 @@ function burgerClose(e) {
 //dots beach info
 const worldMap = document.querySelector('.world-map-wrapper');
 const dotsBeach = document.querySelectorAll('span.dots-beach');
-
-const dotsBeachMobileInfoWeather = document.querySelector(
-  '.dots-beach-mobile-info__weather'
-);
-const dotsBeachMobileInfoWeatherWave = document.querySelector(
-  '.dots-beach-mobile-info__weather-wave'
-);
-const dotsBeachMobileInfoWeatherWater = document.querySelector(
-  '.dots-beach-mobile-info__weather-water'
-);
-const dotsBeachMobileInfoWeatherWind = document.querySelector(
-  '.dots-beach-mobile-info__weather-wind'
-);
+const dotsBeachMobileInfoWeather = document.querySelector('.dots-beach-mobile-info__weather');
+const dotsBeachMobileInfoWeatherWave = document.querySelector('.dots-beach-mobile-info__weather-wave');
+const dotsBeachMobileInfoWeatherWater = document.querySelector('.dots-beach-mobile-info__weather-water');
+const dotsBeachMobileInfoWeatherWind = document.querySelector('.dots-beach-mobile-info__weather-wind');
 
 // worldMap.addEventListener('click', changeDotsForm);
 for (let i = 0; i < dotsBeach.length; i++) {
@@ -245,23 +250,16 @@ function getInfoBeach(e) {
           <p class="dots-beach-info__weather-wind"></p>
         </div>
       </div>
-`;
-      const dotsBeachInfoWeatherWave = document.querySelector(
-        '.dots-beach-info__weather-wave'
-      );
-      const dotsBeachInfoWeatherWater = document.querySelector(
-        '.dots-beach-info__weather-water'
-      );
-      const dotsBeachInfoWeatherWind = document.querySelector(
-        '.dots-beach-info__weather-wind'
-      );
+      `;
+      const dotsBeachInfoWeatherWave = document.querySelector('.dots-beach-info__weather-wave');
+      const dotsBeachInfoWeatherWater = document.querySelector('.dots-beach-info__weather-water');
+      const dotsBeachInfoWeatherWind = document.querySelector('.dots-beach-info__weather-wind');
       //weather api
       const params = 'waveHeight,waterTemperature,windSpeed';
       const options = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key':
-            '4f03edbfffmsh7a6729e58896fe1p1c6f3fjsn31c9794bdc89',
+          'X-RapidAPI-Key': '4f03edbfffmsh7a6729e58896fe1p1c6f3fjsn31c9794bdc89',
           'X-RapidAPI-Host': 'stormglass.p.rapidapi.com',
         },
       };
@@ -296,29 +294,17 @@ function getInfoBeach(e) {
       };
       fetchData();
 
-      //   ${store.hours[203].waveHeight[0].value}
-      //   ${store.hours[203].waterTemperature[0].value}
-      //   ${store.hours[203].windSpeed[0].value}
-
       const surfTitleDistrict = document.getElementById('surf-title-district');
       const surfTitleCountry = document.getElementById('surf-title-country');
-      const dotsBeachMobileInfoLocationName = document.querySelector(
-        '.dots-beach-mobile-info__location-name'
-      );
-      const dotsBeachMobileInfoLocationCity = document.querySelector(
-        '.dots-beach-mobile-info__location-city'
-      );
+      const dotsBeachMobileInfoLocationName = document.querySelector('.dots-beach-mobile-info__location-name');
+      const dotsBeachMobileInfoLocationCity = document.querySelector('.dots-beach-mobile-info__location-city');
       surfTitleDistrict.innerHTML = `${district}`;
       surfTitleCountry.innerHTML = `${country}`;
       dotsBeachMobileInfoLocationName.innerHTML = `${beach}`;
       dotsBeachMobileInfoLocationCity.innerHTML = `${district}`;
       // console.log(beach);
-      const coordinatesBeachLat = document.getElementById(
-        'coordinates-beach-lat'
-      );
-      const coordinatesBeachLng = document.getElementById(
-        'coordinates-beach-lng'
-      );
+      const coordinatesBeachLat = document.getElementById('coordinates-beach-lat');
+      const coordinatesBeachLng = document.getElementById('coordinates-beach-lng');
 
       coordinatesBeachLat.innerHTML = `${lat}&degN`;
       coordinatesBeachLng.innerHTML = `${lng}&degW`;
@@ -392,30 +378,43 @@ function closeDotsForm(e) {
 //===================================================================================
 
 //calculator for sleep
+const sliderCalculatorNights = document.getElementById('slider-calculator-nights');
+const sliderCalculatorGuests = document.getElementById('slider-calculator-guests');
+const sliderCalculatorBtnMinus = document.querySelector('.slider-calculator__minus');
+const sliderCalculatorBtnPlus = document.querySelector('.slider-calculator__plus');
+const sliderNights = document.getElementById('slider-nights');
+const sliderGuests = document.getElementById('slider-guests');
+const resultSleep = document.getElementById('result-sleep');
 
-const sliderCalculatorNight = document.getElementById(
-  'slider-calculator-night'
-);
-const sliderCalculatorGuest = document.getElementById(
-  'slider-calculator-guest'
-);
-const sliderCalculatorBtnMinus = document.querySelector(
-  '.slider-calculator__minus'
-);
-const sliderCalculatorBtnPlus = document.querySelector(
-  '.slider-calculator__plus'
-);
-const sliderNight = document.getElementById('slider-night');
-
-sliderCalculatorNight.addEventListener('click', countNigt);
-
-function countNigt(e) {
+sliderCalculatorNights.addEventListener('click', countNigts);
+function countNigts(e) {
   sliderCalculatorBtnPlus;
   if (e.target.matches('span.slider-calculator__plus')) {
-    sliderNight.value = parseInt(sliderNight.value) + 1;
-    console.log('plus');
+    sliderNights.value = parseInt(sliderNights.value) + 1;
+    console.log('plus night');
   } else if (e.target.matches('span.slider-calculator__minus')) {
-    sliderNight.value = parseInt(sliderNight.value) - 1;
-    console.log('minus');
+    sliderNights.value = parseInt(sliderNights.value) - 1;
+    console.log('minus night');
   }
+  calculatorSleep();
+}
+
+sliderCalculatorGuests.addEventListener('click', countGuests);
+function countGuests(e) {
+  sliderCalculatorBtnPlus;
+  if (e.target.matches('span.slider-calculator__plus')) {
+    sliderGuests.value = parseInt(sliderGuests.value) + 1;
+    console.log('plus guest');
+  } else if (e.target.matches('span.slider-calculator__minus')) {
+    sliderGuests.value = parseInt(sliderGuests.value) - 1;
+    console.log('minus guest');
+  }
+  calculatorSleep();
+}
+
+function calculatorSleep() {
+  const result =
+    Number(sliderNights.value) * Number(resultSleep.dataset.night) +
+    Number(sliderGuests.value) * Number(resultSleep.dataset.guest);
+  resultSleep.innerHTML = `${result}`;
 }
