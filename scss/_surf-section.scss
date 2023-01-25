@@ -1,39 +1,6 @@
 @import '_world-map';
 @import '_surf-slider';
 
-// .title-wrapper-surf {
-//   background-image: url(../images/surf/poi-bg.svg);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   max-width: 294px;
-//   min-width: 100px;
-//   width: 100%;
-//   max-height: 349px;
-//   min-height: 140px;
-//   height: auto;
-//   object-fit: contain;
-//   bottom: -55%;
-//   right: -50%;
-// &::before {
-//   position: absolute;
-//   content: '';
-//   background-image: url(../images/surf/poi-bg.svg);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   max-width: 294px;
-//   min-width: 100px;
-//   width: 100%;
-//   max-height: 349px;
-//   min-height: 140px;
-//   height: auto;
-//   object-fit: contain;
-//   bottom: -55%;
-//   right: -50%;
-// }
-// }
-
 .surf-title-container {
   display: flex;
   width: fit-content;
@@ -65,7 +32,6 @@
     backdrop-filter: blur(2px);
     border-radius: 6px;
   }
-
   &__location-name {
     position: relative;
     font-size: 18px;
@@ -86,7 +52,6 @@
       right: 0;
     }
   }
-
   &__location-city {
     position: relative;
     font-size: 16px;
@@ -101,14 +66,12 @@
       left: 0;
     }
   }
-
   &__weather {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100%;
   }
-
   &__weather-wave {
     position: relative;
     display: flex;
@@ -141,7 +104,6 @@
       bottom: 0;
     }
   }
-
   &__weather-water {
     position: relative;
     display: flex;
@@ -174,7 +136,6 @@
       bottom: 0;
     }
   }
-
   &__weather-wind {
     position: relative;
     display: flex;

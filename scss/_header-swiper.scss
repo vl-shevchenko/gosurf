@@ -60,44 +60,28 @@
   height: 100%;
   width: 100%;
   &__north {
-    background: radial-gradient(
-        62.09% 62.09% at 42.87% 49.23%,
-        rgba(34, 34, 34, 0.426517) 0%,
-        #0f0f0f 100%
-      ),
+    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%),
       url(../images/header/bg-airlie-beach.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   &__south {
-    background: radial-gradient(
-        62.09% 62.09% at 42.87% 49.23%,
-        rgba(34, 34, 34, 0.426517) 0%,
-        #0f0f0f 100%
-      ),
+    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%),
       url(../images/header/bg-beach.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   &__west {
-    background: radial-gradient(
-        62.09% 62.09% at 42.87% 49.23%,
-        rgba(34, 34, 34, 0.426517) 0%,
-        #0f0f0f 100%
-      ),
+    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%),
       url(../images/header/bg-coud-nine.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   &__east {
-    background: radial-gradient(
-        62.09% 62.09% at 42.87% 49.23%,
-        rgba(34, 34, 34, 0.426517) 0%,
-        #0f0f0f 100%
-      ),
+    background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%),
       url(../images/header/bg-malibu-beachjpg.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -121,11 +105,7 @@
   }
 }
 .container-wrapper {
-  background: radial-gradient(
-    62.09% 62.09% at 42.87% 49.23%,
-    rgba(34, 34, 34, 0.426517) 0%,
-    #0f0f0f 100%
-  );
+  background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
 .title-header {
   margin-bottom: 5%;
@@ -136,44 +116,15 @@
   height: 100%;
   width: 100%;
   z-index: auto;
-  //   margin-left: auto;
-  //   margin-right: auto;
   .swiper-wrapper {
     width: 100%;
   }
 }
 
-.mySwiper2 {
-  //   height: 100vh;
-  //   width: 100%;
-}
-
 .swiper-slide {
-  //   text-align: center;
-  //   font-size: 18px;
-  //   // background: #fff;
-
-  //   /* Center slide text vertically */
-  //   display: -webkit-box;
-  //   display: -ms-flexbox;
-  //   display: -webkit-flex;
   display: flex;
-  //   -webkit-box-pack: center;
-  //   -ms-flex-pack: center;
-  //   -webkit-justify-content: center;
   justify-content: center;
-  //   -webkit-box-align: center;
-  //   -ms-flex-align: center;
-  //   -webkit-align-items: center;
   align-items: center;
-  //   background-size: cover;
-  //   background-position: center;
-  //   & img {
-  //     display: block;
-  //     width: 100%;
-  //     height: 100%;
-  //     object-fit: cover;
-  //   }
 }
 
 .swiper-dots-container {
@@ -189,12 +140,9 @@
 
 .dots-wrapper {
   display: flex;
-  //   position: absolute;
-  //   color: #ffffff;
   max-width: 200px;
   min-width: 0;
   width: 100%;
-  //   height: 30px;
   border-top: solid 4px #ffffff;
   padding-top: 6px;
   justify-content: space-between;
@@ -227,12 +175,9 @@
   z-index: 10;
   cursor: pointer;
 }
-.swiper-arrow-next {
-  //   right: 5%;
-}
+
 .swiper-arrow-prev {
   transform: rotate(-180deg);
-  //   right: 8%;
 }
 
 //header-asside
@@ -253,10 +198,6 @@
 //logo
 .logo-header {
   display: flex;
-  //   max-width: 290px;
-  //   min-width: 100px;
-  //   width: 100%;
-  //   height: 25%;
   transform: rotate(-90deg);
 }
 .logo {
@@ -267,9 +208,6 @@
   width: 141px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  //   height: 80px;
-  //   writing-mode: vertical-rl;
-  //   transform: rotate(-180deg);
   &__title {
     font-weight: 800;
     font-size: 60px;
@@ -326,15 +264,11 @@
     flex-direction: column;
     gap: 8px;
   }
-  &__ico {
-  }
 }
 
 .header-search {
   display: flex;
   justify-content: center;
-  &__ico {
-  }
 }
 
 .header-date {

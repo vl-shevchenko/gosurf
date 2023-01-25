@@ -80,8 +80,6 @@
     min-height: 320px;
     object-fit: cover;
   }
-  &__dots-wrapper {
-  }
   &__dots {
     cursor: pointer;
     position: relative;
@@ -113,7 +111,6 @@
       transform: rotate(90deg);
     }
   }
-
   &__dots-argument {
     position: absolute;
     display: none;
@@ -123,13 +120,9 @@
     font-weight: 800;
     font-size: 24px;
     line-height: 24px;
-    /* or 100% */
-
     text-transform: uppercase;
-
     color: #ffffff;
     width: 255px;
-
     max-width: 345px;
     width: max-content;
     height: fit-content;
@@ -159,7 +152,6 @@
   &__extras {
     margin-top: auto;
   }
-
   &__extras-title {
     font-family: 'Fira Sans';
     font-style: normal;
@@ -170,14 +162,12 @@
     margin-bottom: 21px;
     padding-left: 15px;
   }
-
   &__extras-container-card {
     display: flex;
     gap: 65px;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-
   &__extras-card-extras {
     display: flex;
     flex-direction: column;
@@ -188,13 +178,11 @@
     width: 160px;
     height: 210px;
   }
-
   &__extras-img-extras {
     width: 103px;
     height: 104px;
     margin-bottom: 21px;
   }
-
   &__extras-name-card {
     font-family: 'Fira Sans';
     font-style: normal;
@@ -207,7 +195,6 @@
     mix-blend-mode: normal;
     opacity: 0.5;
   }
-
   &__extras-prise-card {
     font-family: 'Fira Sans';
     font-style: normal;

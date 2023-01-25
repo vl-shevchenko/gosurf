@@ -90,13 +90,13 @@ const beaches = [
 ];
 
 //swiper header
-var swiper = new Swiper('.mySwiper', {
+let swiper = new Swiper('.mySwiper', {
   spaceBetween: 4,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
 });
-var swiper2 = new Swiper('.mySwiper2', {
+let swiper2 = new Swiper('.mySwiper2', {
   effect: 'fade',
   fadeEffect: {
     crossFade: true,
@@ -113,7 +113,7 @@ var swiper2 = new Swiper('.mySwiper2', {
 });
 
 //swiper surf
-var swiperSurf = new Swiper('.mySwiper-surf', {
+let swiperSurf = new Swiper('.mySwiper-surf', {
   slidesPerView: 1.2,
   spaceBetween: 10,
   loop: true,
@@ -146,7 +146,7 @@ var swiperSurf = new Swiper('.mySwiper-surf', {
 });
 
 //swiper travel
-var swiperTravel = new Swiper('.mySwiper-travel', {
+let swiperTravel = new Swiper('.mySwiper-travel', {
   effect: 'fade',
   fadeEffect: {
     crossFade: true,
@@ -160,7 +160,7 @@ var swiperTravel = new Swiper('.mySwiper-travel', {
 });
 
 //swiper sleep
-var swiperSleep = new Swiper('.mySwiper-sleep', {
+let swiperSleep = new Swiper('.mySwiper-sleep', {
   effect: 'fade',
   fadeEffect: {
     crossFade: true,
@@ -204,13 +204,9 @@ const dotsBeachMobileInfoWeatherWind = document.querySelector('.dots-beach-mobil
 for (let i = 0; i < dotsBeach.length; i++) {
   dotsBeach[i].addEventListener('click', getInfoBeach);
 }
+
 function getInfoBeach(e) {
   let dotsCurrent = e.target;
-
-  // e.target.classList.remove('active'); //remove 'active' при повторному кліку на ту ж саму точку
-  // e.target.innerHTML = '';
-  // console.log('remove active classList first');
-  //check classlist 'active'
   for (let i = 0; i < dotsBeach.length; i++) {
     if (dotsBeach[i].classList.contains('active')) {
       if (dotsBeach[i].firstChild) {
@@ -221,14 +217,8 @@ function getInfoBeach(e) {
       console.log('removed the previous classList "active"');
     }
   }
-  // if (e.target.classList.contains('active')) {
-  //   e.target.classList.remove('active');
-  //   e.target.innerHTML = '';
-  //   console.log('remove classList active too');
-  // } else {
   e.target.classList.add('active');
   console.log('add classList "active"');
-  // }
 
   //combining a dotsBeach with an beaches
   for (let i = 0; i < beaches.length; i++) {
@@ -254,6 +244,7 @@ function getInfoBeach(e) {
       const dotsBeachInfoWeatherWave = document.querySelector('.dots-beach-info__weather-wave');
       const dotsBeachInfoWeatherWater = document.querySelector('.dots-beach-info__weather-water');
       const dotsBeachInfoWeatherWind = document.querySelector('.dots-beach-info__weather-wind');
+
       //weather api
       const params = 'waveHeight,waterTemperature,windSpeed';
       const options = {
@@ -336,46 +327,6 @@ function closeDotsForm(e) {
     }
   }
 }
-//weather
-// const lat = 25.793449;
-// const lng = -80.139198;
-// const params = 'waveHeight,waterTemperature,windSpeed';
-// fetch(
-//   `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`,
-//   {
-//     headers: {
-//       Authorization:
-//         '08b5570a-5385-11ed-a654-0242ac130002-08b55782-5385-11ed-a654-0242ac130002',
-//     },
-//   }
-// )
-//   .then((response) => response.json())
-//   .then((jsonData) => {
-//     // Do something with response data.
-//     console.log(jsonData);
-//   });
-
-//===================================================================================
-// const lat = beaches[5].coordinates.lat;
-// const lng = beaches[5].coordinates.lng;
-// const params = 'waveHeight,waterTemperature,windSpeed';
-// const options = {
-//   method: 'GET',
-//   headers: {
-//     'X-RapidAPI-Key': '4f03edbfffmsh7a6729e58896fe1p1c6f3fjsn31c9794bdc89',
-//     'X-RapidAPI-Host': 'stormglass.p.rapidapi.com',
-//   },
-// };
-
-// fetch(
-//   `https://stormglass.p.rapidapi.com/forecast?lat=${lat}&lng=${lng}&params=${params}`,
-//   options
-// )
-//   .then((response) => response.json())
-//   .then((response) => console.log(response))
-//   .catch((err) => console.error(err));
-
-//===================================================================================
 
 //calculator for sleep
 const sliderCalculatorNights = document.getElementById('slider-calculator-nights');
