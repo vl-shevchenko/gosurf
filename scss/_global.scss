@@ -111,12 +111,12 @@
     margin: 0 auto;
     cursor: pointer;
     width: fit-content;
-    height: 80px;
     align-items: center;
+    line-height: 100%;
   }
   &__title-span {
     position: relative;
-    background-color: #4af6cd;
+    background-color: #4bf7ce40;
     padding: 15px 57px 15px 15px;
     margin-left: 15px;
     &::before {
@@ -144,7 +144,11 @@
     }
   }
 }
-
+.btn-box__title:hover {
+  .btn-box__title-span {
+    background-color: #4af6cd;
+  }
+}
 //section slider
 .slider {
   &__img {

@@ -110,6 +110,15 @@
       transition: 0.2s;
       transform: rotate(90deg);
     }
+    &:hover {
+      background-color: #4bf7ce40;
+      &::before {
+        background-color: #ffffff;
+      }
+      &::after {
+        background-color: #ffffff;
+      }
+    }
   }
   &__dots-argument {
     position: absolute;

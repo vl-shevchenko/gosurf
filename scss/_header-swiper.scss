@@ -108,7 +108,7 @@
   background: radial-gradient(62.09% 62.09% at 42.87% 49.23%, rgba(34, 34, 34, 0.426517) 0%, #0f0f0f 100%);
 }
 .title-header {
-  margin-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 //swiper
@@ -195,6 +195,23 @@
   align-items: center;
 }
 
+.header__asside::-webkit-scrollbar {
+  width: 4px;
+}
+
+.header__asside::-webkit-scrollbar-track {
+  border-radius: 2px;
+}
+
+.header__asside::-webkit-scrollbar-thumb {
+  background: #ffffff40;
+  border-radius: 2px;
+}
+
+.header__asside::-webkit-scrollbar-thumb:hover {
+  background: #ffffff80;
+}
+
 //logo
 .logo-header {
   display: flex;
@@ -205,7 +222,6 @@
   text-align: center;
   justify-content: center;
   color: #fff;
-  width: 141px;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   &__title {
